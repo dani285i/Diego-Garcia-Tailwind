@@ -15,36 +15,16 @@
 
 body {
     font-family: "Montserrat";
-    line-height: 1.5;
+    line-height: 1.8;
     color: var(--text-light);
-    background-color: var(--background-dark-grey);
+    background-color: var(--background-black);
 }
 
-.container {
+.estructura-de-secciones {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-}
-
-#header-title{
-    text-align: center;
-}
-
-#header-title-anchor{
-    text-decoration: none;
-    color: var(--base-white);
-}
-
-#header-title-anchor> h1{
-    font-weight: 500;
-    margin-bottom: -1.25vh;
-    padding: -5vh;
-}
-
-#header-title-anchor > h2{
-    font-weight: 300;
-    margin-top: -2vh;
 }
 
 /* HEADER */
@@ -54,11 +34,31 @@ header {
     border-bottom: 1px solid var(--background-card);
 }
 
-header .container {
+header .estructura-de-secciones {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
+#header-title{
+    text-align: center;
+}
+
+    #header-title-anchor{
+        text-decoration: none;
+        color: var(--base-white);
+    }
+        
+    #header-title-anchor> h1{
+        font-weight: 500;
+        margin-bottom: -1.25vh;
+        padding: -5vh;
+    }
+
+    #header-title-anchor > h2{
+        font-weight: 300;
+        margin-top: -2vh;
+    }
 
 header h1 {
     font-size: 1.8rem;
@@ -68,10 +68,41 @@ header h1 {
     letter-spacing: 1px;
 }
 
+.header-logo-container {
+    position: relative;
+    width: 10vh;
+    height: 10vh;
+    margin-left: 2vw;
+    cursor: pointer;
+}
+
+.header-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.6s ease-in-out; 
+}
+
+.logo-hover {
+    opacity: 0;
+}
+
+.header-logo-container:hover .logo-main {
+    opacity: 0;
+}
+
+.header-logo-container:hover .logo-hover {
+    opacity: 1;
+}
+
 nav ul {
     list-style: none;
     display: flex;
-    gap: 25px;
+    align-items: center;
+    gap: 1.5vw;
 }
 
 nav ul li {
@@ -89,7 +120,7 @@ nav ul li:hover {
 /* HERO SECTION */
 .hero {
     height: 60vh;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.2), var(--background-black));
+    background: linear-gradient(to bottom, rgba(161, 161, 161, 0.2), var(--background-black));
     align-items: flex-end;
     padding-bottom: 50px;
 }
@@ -129,4 +160,87 @@ nav ul li:hover {
     height: auto;
     border-radius: 5px;
     box-shadow: 0 0 20px rgba(170, 108, 0, 0.849);
+}
+
+/* -------------------------- PALMARÉS -------------------------- */
+
+.diagonal-section-about-me {
+    background: var(--base-white);
+    padding: 100px 20px;
+    clip-path: polygon(0 0, 100% 95%, 100% 100%, 0 100%);
+}
+
+.palmares {
+    padding: 60px 0;
+    background-color: var(--base-white);
+}
+
+.palmares-container {
+    display: flex;
+    gap: 5vw;
+    align-items: center;
+}
+
+.palmares-list {
+    list-style: none;
+}
+
+/* Listas con efecto inclinado */
+.palmares-list li {
+    background: linear-gradient(90deg, #1a1a1a 0%, #000000 100%);
+    padding: 3vh 2vw;
+    margin-bottom: 15px;
+    transform: skewX(-20deg);
+    border: 1px solid var(--background-card);
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+    .palmares-list li:hover {
+        background: var(--background-black);
+        border-left: 4px solid var(--primary-orange);
+        transform: skewX(-20deg) translateX(10px);
+    }
+
+/* Quitar la inclinación para el texto */
+.palmares-list li h3, .palmares-list li p, .palmares-list-year-container h3 {
+    transform: skewX(20deg); 
+    margin: 0;
+}
+
+.palmares-list li h3 {
+    background-color: none;
+    border: 2px solid var(--base-white);
+    color: var(--base-white);
+    padding: 2px 8px;
+    margin-right: 15px;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.palmares-list li p {
+    color: var(--base-white);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.palmares-list-year-container{
+    transform: skewX(-20deg);
+}
+
+.palmares-poster {
+    flex: 1;
+}
+
+.palmares-poster img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.final-diagonal-section-about-me {
+    background: var(--base-white);
+    padding: 100px 20px;
+    clip-path: polygon(100% 100%, 0% 0%, 0% 0%, 100% 0%);
 }
