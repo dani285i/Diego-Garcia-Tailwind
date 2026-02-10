@@ -53,11 +53,14 @@ header .estructura-de-secciones {
         font-weight: 500;
         margin-bottom: -1.25vh;
         padding: -5vh;
+        line-height: 6vh;
     }
 
     #header-title-anchor > h2{
-        font-weight: 300;
+        font-weight: 400;
         margin-top: -2vh;
+        color: var(--primary-red);
+        line-height: 5vh;
     }
 
 header h1 {
@@ -171,7 +174,7 @@ nav ul li:hover {
 .diagonal-section-about-me {
     background: var(--base-white);
     padding: 100px 20px;
-    clip-path: polygon(0 0, 101% 100%, 0 101%);
+    clip-path: polygon(0 0, 0% 101%, 100% 100.2%);
 }
 
 .palmares {
@@ -442,4 +445,174 @@ nav ul li:hover {
 
 .noticia-link:hover {
     color: var(--primary-orange);
+}
+
+/* -------------------------- FOOTER -------------------------- */
+
+footer {
+    background-color: var(--background-black);
+    color: var(--base-white);
+    border-top: 1px solid var(--background-dark-grey);
+    margin-top: 0;
+}
+
+/* --- Sección de Sponsors --- */
+.sponsors-section {
+    background-color: var(--background-card);
+    padding: 40px 0;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); 
+    padding-bottom: 60px;
+}
+
+.sponsors-title {
+    color: var(--base-white);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.sponsors-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.sponsor-logo {
+    height: 10vh;
+    width: auto;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.sponsor6{
+    height: 20vh;
+}
+
+.sponsor7{
+    height: 20vh;
+}
+
+.sponsor-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* --- Footer Principal --- */
+.footer-main {
+    padding: 60px 0 40px;
+    background-color: var(--background-black);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 40px;
+}
+
+.footer-column h4 {
+    color: var(--primary-red);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.footer-logo h2 {
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: 800;
+    color: var(--base-white);
+    margin-bottom: 15px;
+}
+
+.footer-logo h2 span {
+    color: var(--primary-red);
+}
+
+.footer-desc {
+    color: #ffffff;
+    font-size: 0.9rem;
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+/* Redes Sociales */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    width: 35px;
+    height: 35px;
+    background-color: var(--background-card);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--base-white);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.8rem;
+    border: 1px solid var(--background-dark-grey);
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: var(--primary-red);
+    border-color: var(--primary-red);
+    transform: translateY(-3px);
+}
+
+/* Columna Enlaces */
+.links-col ul {
+    list-style: none;
+}
+
+.links-col ul li {
+    margin-bottom: 10px;
+}
+
+.links-col ul li a {
+    color: var(--base-white);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.links-col ul li a:hover {
+    color: var(--primary-orange);
+    padding-left: 5px; /* Pequeño desplazamiento al hover */
+}
+
+/* Columna Contacto */
+.contact-col p {
+    color: #ccc;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+/* --- Barra Inferior --- */
+.footer-bottom {
+    border-top: 1px solid var(--background-card);
+    padding: 20px 0;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.footer-bottom .estructura-de-secciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.designer-credit a {
+    color: var(--primary-red);
+    text-decoration: none;
 }
