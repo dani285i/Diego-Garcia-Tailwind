@@ -35,17 +35,17 @@
 
             <nav>
                 <ul>
-                    <li><a href="#inicio" style="text-decoration: none; color: inherit;">Inicio</a></li>
-                    <li><a href="#palmares" style="text-decoration: none; color: inherit;">Palmarés</a></li>
-                    <li><a href="#galeria" style="text-decoration: none; color: inherit;">Galería</a></li>
-                    <li><a href="#noticias" style="text-decoration: none; color: inherit;">Noticias</a></li>
-                    <li><a href="coche.html" style="text-decoration: none; color: inherit;">Coche</a></li>
+                    <li><a href="index.html" style="text-decoration: none; color: inherit;">Inicio</a></li>
+                    <li><a href="index.html#palmares" style="text-decoration: none; color: inherit;">Palmarés</a></li>
+                    <li><a href="index.html#galeria" style="text-decoration: none; color: inherit;">Galería</a></li>
+                    <li><a href="index.html#noticias" style="text-decoration: none; color: inherit;">Noticias</a></li>
+                    <li style="color: var(--primary-red);">Coche</li> 
                     <li><a href="contacto.html" style="text-decoration: none; color: inherit;">Contacto</a></li>
                     <li class="header-logo-container">
                         <img src="../media/logos/Logo Diego Blanco.png" alt="Logo" class="header-logo logo-main">
                         <img src="../media/logos/Logo Diego Rojo.png" alt="Logo Hover" class="header-logo logo-hover">
                     </li>
-                </ul>   
+                </ul>
             </nav>
         </div>
     </header>
@@ -55,7 +55,7 @@
             
             <div class="coche-titulo-container">
                 <h1>Life Live TN11</h1>
-                <p>Visualizador 360º del vehículo de competición</p>
+                <p>Visualizador de fotos del coche</p>
             </div>
 
             <div class="visor-card">
@@ -126,6 +126,7 @@
                     <img src="../media/sponsors/blancos/senra sport.png" alt="Sponsor 5" class="sponsor-logo">
                     <img src="../media/sponsors/blancos/ramon garcia.png" alt="Sponsor 6" class="sponsor-logo sponsor6">
                     <img src="../media/sponsors/blancos/rgs europe.png" alt="Sponsor 7" class="sponsor-logo sponsor7">
+                    <img src="../media/sponsors/blancos/logoliñagar.png" alt="Sponsor Liñagar" class="sponsor-logo">
                 </div>
             </div>
         </div>
@@ -259,6 +260,16 @@
             });
 
         });
+
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
     </script>
 
 </body>
