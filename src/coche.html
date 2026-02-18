@@ -14,6 +14,10 @@
     <meta name="apple-mobile-web-app-title" content="Diego García" />
     <link rel="manifest" href="../media/favicon/site.webmanifest" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     <title>Coche - TN11 | Diego García</title>
 
 </head>
@@ -31,16 +35,17 @@
 
             <nav>
                 <ul>
-                    <li><a href="index.html" style="text-decoration: none; color: inherit;">Inicio</a></li>
-                    <li>Palmarés</li>
-                    <li>Galería</li>
-                    <li>Noticias</li>
-                    <li style="color: var(--primary-red);">Coche</li> <li><a href="contacto.html" style="text-decoration: none; color: inherit;">Contacto</a></li>
+                    <li><a href="#inicio" style="text-decoration: none; color: inherit;">Inicio</a></li>
+                    <li><a href="#palmares" style="text-decoration: none; color: inherit;">Palmarés</a></li>
+                    <li><a href="#galeria" style="text-decoration: none; color: inherit;">Galería</a></li>
+                    <li><a href="#noticias" style="text-decoration: none; color: inherit;">Noticias</a></li>
+                    <li><a href="coche.html" style="text-decoration: none; color: inherit;">Coche</a></li>
+                    <li><a href="contacto.html" style="text-decoration: none; color: inherit;">Contacto</a></li>
                     <li class="header-logo-container">
                         <img src="../media/logos/Logo Diego Blanco.png" alt="Logo" class="header-logo logo-main">
                         <img src="../media/logos/Logo Diego Rojo.png" alt="Logo Hover" class="header-logo logo-hover">
                     </li>
-                </ul>
+                </ul>   
             </nav>
         </div>
     </header>
@@ -67,11 +72,12 @@
                                 <path d="M15 18l-6-6 6-6"/>
                             </svg>
                         </div>
-                        <span>Girar Izq.</span>
+                        <span>Anterior</span>
                     </div>
 
                     <div class="indicadores" id="indicadores-container">
                         <div class="dot active"></div>
+                        <div class="dot"></div>
                         <div class="dot"></div>
                         <div class="dot"></div>
                         <div class="dot"></div>
@@ -83,7 +89,7 @@
                                 <path d="M9 18l6-6-6-6"/>
                             </svg>
                         </div>
-                        <span>Girar Der.</span>
+                        <span>Siguiente</span>
                     </div>
 
                 </div>
@@ -175,22 +181,19 @@
     </footer>
 
     <script>
+
         document.addEventListener('DOMContentLoaded', () => {
-            
-            // 1. CONFIGURACIÓN DE IMÁGENES
-            // IMPORTANTE: Debes tener estas 4 imágenes en tu carpeta media/img/Coche/
-            // Si no las tienes, el código usará una imagen de respaldo para que no se vea roto.
+
             const carImages = [
-                "../media/img/Coche/vista-frente.png",   // [0] Frente
-                "../media/img/Coche/vista-lateral.png",  // [1] Lado (Esta parece que sí la tienes como jpg)
-                "../media/img/Coche/vista-atras.png",    // [2] Atrás
-                "../media/img/Coche/vista-otro-lado.png" // [3] Otro Lado
+                "../media/img/Coche/vista-frente.png",
+                "../media/img/Coche/coche-closeup.jpg",
+                "../media/img/Coche/coche-palanca-de-cambios.jpg",
+                "../media/img/Coche/coche-salpicadero.jpg",
+                "../media/img/Coche/coche-rueda.jpg"
             ];
 
-            // Imagen de respaldo por si fallan las rutas de arriba (usamos una que sabemos que existe)
             const fallbackImage = "../media/img/Coche/coche-lateral.jpg";
 
-            // Referencias al DOM
             const imgElement = document.getElementById('car-image');
             const prevBtn = document.getElementById('btn-prev');
             const nextBtn = document.getElementById('btn-next');
@@ -198,20 +201,16 @@
 
             let currentIndex = 0;
 
-            // Función inicial para cargar la primera imagen
-            updateImage(false); // false = sin animación al cargar la página
+            updateImage(false);
 
-            // Función principal para cambiar la imagen
             function updateImage(animate = true) {
                 if (animate) {
                     imgElement.classList.add('fade-out');
                 }
 
-                // Esperar un poquito para cambiar la fuente (coincide con la transición CSS)
                 setTimeout(() => {
                     imgElement.src = carImages[currentIndex];
                     
-                    // Actualizar los puntos (dots)
                     dots.forEach((dot, index) => {
                         if (index === currentIndex) {
                             dot.classList.add('active');
@@ -220,26 +219,24 @@
                         }
                     });
 
-                    // Manejo de error: Si la imagen PNG no existe, carga la JPG de respaldo
                     imgElement.onerror = function() {
                         this.src = fallbackImage;
                     };
 
-                    // Quitar la clase de fade para que reaparezca
                     imgElement.onload = () => {
                         imgElement.classList.remove('fade-out');
                     };
-                    // Por si la imagen ya estaba en caché y no dispara onload
+
                     setTimeout(() => imgElement.classList.remove('fade-out'), 50);
 
                 }, animate ? 300 : 0);
             }
 
-            // Event Listeners para los botones
+
             nextBtn.addEventListener('click', () => {
                 currentIndex++;
                 if (currentIndex >= carImages.length) {
-                    currentIndex = 0; // Volver al principio
+                    currentIndex = 0;
                 }
                 updateImage();
             });
@@ -247,12 +244,11 @@
             prevBtn.addEventListener('click', () => {
                 currentIndex--;
                 if (currentIndex < 0) {
-                    currentIndex = carImages.length - 1; // Ir al final
+                    currentIndex = carImages.length - 1;
                 }
                 updateImage();
             });
 
-            // Opcional: Permitir cambiar haciendo clic en los puntos
             dots.forEach((dot, index) => {
                 dot.addEventListener('click', () => {
                     if (currentIndex !== index) {

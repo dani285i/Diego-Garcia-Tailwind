@@ -14,43 +14,44 @@
     <meta name="apple-mobile-web-app-title" content="Diego García" />
     <link rel="manifest" href="../media/favicon/site.webmanifest" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     <title>Diego García | Web Oficial</title>
     
 </head>
 
 <body>
 
-    <header>
-
+    <header id="menu"> 
         <div class="estructura-de-secciones">
-
             <div id="header-title">
                 <a href="#" id="header-title-anchor">
                     <h1>DIEGO</h1>
                     <h2>GARCÍA</h2>
                 </a>
             </div>
-
             <nav>
                 <ul>
-                    <li>Inicio</li>
-                    <li>Palmarés</li>
-                    <li>Galería</li>
-                    <li>Noticias</li>
-                    <li>Coche</li>
-                    <li>Contacto</li>
+                    <li><a href="#inicio" style="text-decoration: none; color: inherit;">Inicio</a></li>
+                    <li><a href="#palmares" style="text-decoration: none; color: inherit;">Palmarés</a></li>
+                    <li><a href="#galeria" style="text-decoration: none; color: inherit;">Galería</a></li>
+                    <li><a href="#noticias" style="text-decoration: none; color: inherit;">Noticias</a></li>
+                    <li><a href="coche.html" style="text-decoration: none; color: inherit;">Coche</a></li>
+                    <li><a href="contacto.html" style="text-decoration: none; color: inherit;">Contacto</a></li>
                     <li class="header-logo-container">
                         <img src="../media/logos/Logo Diego Blanco.png" alt="Logo" class="header-logo logo-main">
                         <img src="../media/logos/Logo Diego Rojo.png" alt="Logo Hover" class="header-logo logo-hover">
                     </li>
-                </ul>
+                </ul>   
             </nav>
-
         </div>
-
     </header>
 
     <section class="hero">
+
+        <section class="hero" id="inicio"></section>
 
         <video autoplay muted loop playsinline class="hero-video">
             <source src="../media/vids/video-de-diego.mp4" type="video/mp4">
@@ -64,7 +65,7 @@
 
     </section>
 
-    <section class="about">
+    <section class="about" id="sobre-mi">
         <div class="estructura-de-secciones">
             <div class="about-content">
                 <div class="about-text">
@@ -79,7 +80,7 @@
 
     <section class="diagonal-section-about-me"></section>
 
-    <section class="palmares">
+    <section class="palmares" id="palmares">    
         <div class="estructura-de-secciones palmares-container">
 
             <div>
@@ -115,7 +116,7 @@
 
     <section class="final-diagonal-section-about-me"></section>
 
-    <section class="galeria">
+    <section class="galeria" id="galeria">
 
         <div class="estructura-de-secciones">
 
@@ -155,7 +156,7 @@
 
     </section>
 
-    <section class="noticias">
+    <section class="noticias" id="noticias">
 
         <div class="estructura-de-secciones">
 
@@ -279,20 +280,6 @@
 
     </footer>
 
-    <script>
-        const header = document.querySelector('header');
-        const heroSection = document.querySelector('.hero');
-
-        window.addEventListener('scroll', () => {
-            const heroHeight = heroSection.offsetHeight;
-
-            if (window.scrollY > (heroHeight - 100)) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-    </script>
 
 </body>
 </html>
