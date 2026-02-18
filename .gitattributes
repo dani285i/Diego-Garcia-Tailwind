@@ -1,0 +1,2 @@
+media/vids/Video[[:space:]]De[[:space:]]Diego.mp4 filter=lfs diff=lfs merge=lfs -text
+*.mp4 filter=lfs diff=lfs merge=lfs -text
