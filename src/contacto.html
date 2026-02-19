@@ -1,212 +1,265 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="./assets/styles.css">
-
-    <link rel="icon" type="image/png" href="../media/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="../media/favicon/favicon.svg" />
-    <link rel="shortcut icon" href="../media/favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="../media/favicon/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="Diego García" />
-    <link rel="manifest" href="../media/favicon/site.webmanifest" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+    <link rel="icon" type="image/png" href="../media/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../media/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="../media/favicon/favicon.ico" />
+    
     <title>Contacto | Diego García</title>
 
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary-red': '#ff2021',
+                        'primary-orange': '#ff6200',
+                        'base-white': '#f9f9f9',
+                        'text-light': '#fff7f2',
+                        'text-muted': '#cccccc',
+                        'text-gray': '#aaaaaa', 
+                        'text-dark-muted': '#888888', 
+                        'bg-black': '#000000',
+                        'bg-dark-grey': '#1a1a1a',
+                        'bg-card': '#1f1f1f',
+                        'border-dark': '#313131',
+                        'border-light': '#333333',
+                    },
+                    boxShadow: {
+                        'glow-red': '0 10px 25px rgba(255, 32, 33, 0.15)',
+                        'card-depth': '0 10px 30px rgba(0, 0, 0, 0.5)',
+                        'input-focus': '0 0 10px rgba(255, 32, 33, 0.2)',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
-<body>
+<body class="bg-bg-black text-text-light font-montserrat leading-relaxed selection:bg-primary-red selection:text-white antialiased flex flex-col min-h-screen">
 
-    <header>
-        <div class="estructura-de-secciones">
-            <div id="header-title">
-                <a href="index.html" id="header-title-anchor">
-                    <h1>DIEGO</h1>
-                    <h2>GARCÍA</h2>
+    <header id="main-header" class="fixed top-0 left-0 w-full z-50 py-8 transition-all duration-300 ease-in-out bg-gradient-to-b from-black/90 to-transparent">
+        <div class="w-full max-w-[1200px] mx-auto px-5 flex justify-between items-center">
+            
+            <div class="text-center group">
+                <a href="index.html" class="no-underline text-base-white block">
+                    <h1 class="text-[1.8rem] font-extrabold uppercase tracking-wide mb-[-5px] leading-tight">Diego</h1>
+                    <h2 class="text-[1.8rem] font-normal text-primary-red mt-[-5px] leading-tight group-hover:text-primary-orange transition-colors duration-300">García</h2>
                 </a>
             </div>
 
-            <nav>
-                <ul>
-                    <li><a href="index.html" style="text-decoration: none; color: inherit;">Inicio</a></li>
-                    <li><a href="index.html#palmares" style="text-decoration: none; color: inherit;">Palmarés</a></li>
-                    <li><a href="index.html#galeria" style="text-decoration: none; color: inherit;">Galería</a></li>
-                    <li><a href="index.html#noticias" style="text-decoration: none; color: inherit;">Noticias</a></li>
-                    <li><a href="coche.html" style="text-decoration: none; color: inherit;">Coche</a></li>
-                    <li style="color: var(--primary-red);">Contacto</li>
-                    <li class="header-logo-container">
-                        <img src="../media/logos/Logo Diego Blanco.png" alt="Logo" class="header-logo logo-main">
-                        <img src="../media/logos/Logo Diego Rojo.png" alt="Logo Hover" class="header-logo logo-hover">
+            <nav class="hidden md:block">
+                <ul class="flex items-center gap-6 list-none m-0 p-0">
+                    <li><a href="index.html" class="text-sm font-medium uppercase hover:text-primary-red transition-colors duration-300">Inicio</a></li>
+                    <li><a href="index.html#palmares" class="text-sm font-medium uppercase hover:text-primary-red transition-colors duration-300">Palmarés</a></li>
+                    <li><a href="index.html#galeria" class="text-sm font-medium uppercase hover:text-primary-red transition-colors duration-300">Galería</a></li>
+                    <li><a href="index.html#noticias" class="text-sm font-medium uppercase hover:text-primary-red transition-colors duration-300">Noticias</a></li>
+                    <li><a href="coche.html" class="text-sm font-medium uppercase hover:text-primary-red transition-colors duration-300">Coche</a></li>
+                    <li><span class="text-sm font-medium uppercase text-primary-red cursor-default">Contacto</span></li>
+                    
+                    <li class="relative w-[10vh] h-[10vh] ml-4 cursor-pointer group">
+                        <img src="../media/logos/Logo Diego Blanco.png" alt="Logo" class="absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-500 ease-in-out group-hover:opacity-0">
+                        <img src="../media/logos/Logo Diego Rojo.png" alt="Logo Hover" class="absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100">
                     </li>
-                </ul>
+                </ul>   
             </nav>
+
+            <div class="md:hidden text-white text-2xl cursor-pointer">☰</div>
         </div>
     </header>
 
-    <section class="contacto-main">
-        <div class="estructura-de-secciones">
+    <main class="pt-[160px] pb-20 bg-bg-black flex-grow">
+        <div class="w-full max-w-[1200px] mx-auto px-5">
             
-            <div class="contacto-titulo-container">
-                <h1>Ponte en Contacto</h1>
-                <p>¿Interesado en patrocinios, prensa o tienes alguna consulta general? Escríbenos.</p>
+            <div class="text-center mb-16">
+                <h1 class="text-[3rem] text-primary-red font-extrabold uppercase mb-2.5">Ponte en Contacto</h1>
+                <p class="text-text-muted text-[1.1rem] max-w-[600px] mx-auto">¿Interesado en patrocinios, prensa o tienes alguna consulta general? Escríbenos.</p>
             </div>
 
-            <div class="contacto-grid">
+            <div class="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-10 max-w-[1000px] mx-auto">
                 
-                <div class="contacto-info-card">
-                    <h3>Información Directa</h3>
-                    <p class="contacto-desc">El equipo de Diego García está disponible para propuestas deportivas y comerciales.</p>
+                <div class="bg-bg-card p-10 rounded-xl border border-bg-dark-grey border-t-[4px] border-t-primary-orange shadow-card-depth h-fit ">
+                    <h3 class="text-[1.5rem] text-base-white mb-4 font-bold">Información Directa</h3>
                     
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    <p class="text-text-gray text-[0.95rem] mb-8 leading-relaxed text-pretty ">
+                        El equipo de Diego García está disponible para propuestas deportivas y comerciales. Valoramos cada oportunidad de colaboración y nos esforzamos por responder con la mayor brevedad posible para seguir creciendo juntos.
+                    </p>
+                    
+                    <div class="flex flex-col gap-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-primary-red/10 text-primary-red flex items-center justify-center rounded shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-base-white text-[1rem] font-bold mb-1">Email</h4>
+                                <p class="text-text-dark-muted text-[0.9rem] leading-snug">diegogarciamesia@gmail.com</p>
+                                <p class="text-text-dark-muted text-[0.9rem] leading-snug">rg@gruporg.eu</p>
+                            </div>
                         </div>
-                        <div class="info-text">
-                            <h4>Email</h4>
-                            <p>diegogarciamesia@gmail.com</p>
-                            <p>rg@gruporg.eu</p>
-                        </div>
-                    </div>
 
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-primary-red/10 text-primary-red flex items-center justify-center rounded shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-base-white text-[1rem] font-bold mb-1">Teléfono</h4>
+                                <p class="text-text-dark-muted text-[0.9rem] leading-snug">+34 881 25 56 53</p>
+                                <p class="text-text-dark-muted text-[0.9rem] leading-snug">+34 626 15 61 46</p>
+                            </div>
                         </div>
-                        <div class="info-text">
-                            <h4>Teléfono</h4>
-                            <p>+34 881 25 56 53</p>
-                            <p>+34 626 15 61 46</p>
-                        </div>
-                    </div>
 
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                        </div>
-                        <div class="info-text">
-                            <h4>Base Operativa</h4>
-                            <p>A Coruña, Galicia, España</p>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-primary-red/10 text-primary-red flex items-center justify-center rounded shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-base-white text-[1rem] font-bold mb-1">Base Operativa</h4>
+                                <p class="text-text-dark-muted text-[0.9rem] leading-snug">A Coruña, Galicia, España</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="contacto-form-card">
-                    <form action="#" class="form-estilizado">
+                <div class="bg-bg-card p-10 rounded-xl border border-bg-dark-grey shadow-card-depth">
+                    <form action="#" class="flex flex-col gap-5">
                         
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="nombre">Nombre</label>
-                                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div class="flex flex-col gap-2">
+                                <label for="nombre" class="text-[0.85rem] text-text-muted font-bold uppercase tracking-wider">Nombre</label>
+                                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required 
+                                    class="bg-bg-black border border-border-light p-4 text-base-white rounded text-[0.95rem] transition-all duration-300 focus:outline-none focus:border-primary-red focus:shadow-input-focus placeholder-gray-600">
                             </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                            <div class="flex flex-col gap-2">
+                                <label for="email" class="text-[0.85rem] text-text-muted font-bold uppercase tracking-wider">Email</label>
+                                <input type="email" id="email" name="email" placeholder="tu@email.com" required 
+                                    class="bg-bg-black border border-border-light p-4 text-base-white rounded text-[0.95rem] transition-all duration-300 focus:outline-none focus:border-primary-red focus:shadow-input-focus placeholder-gray-600">
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="asunto">Asunto</label>
-                            <select id="asunto" name="asunto">
-                                <option value="patrocinio">Propuesta de Patrocinio</option>
-                                <option value="prensa">Prensa / Entrevistas</option>
-                                <option value="general">Consulta General</option>
-                            </select>
+                        <div class="flex flex-col gap-2">
+                            <label for="asunto" class="text-[0.85rem] text-text-muted font-bold uppercase tracking-wider">Asunto</label>
+                            <div class="relative">
+                                <select id="asunto" name="asunto" 
+                                    class="w-full bg-bg-black border border-border-light p-4 text-base-white rounded text-[0.95rem] transition-all duration-300 focus:outline-none focus:border-primary-red focus:shadow-input-focus appearance-none cursor-pointer">
+                                    <option value="patrocinio">Propuesta de Patrocinio</option>
+                                    <option value="prensa">Prensa / Entrevistas</option>
+                                    <option value="general">Consulta General</option>
+                                </select>
+                                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-text-muted">
+                                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="mensaje">Mensaje</label>
-                            <textarea id="mensaje" name="mensaje" rows="5" placeholder="¿En qué podemos ayudarte?" required></textarea>
+                        <div class="flex flex-col gap-2">
+                            <label for="mensaje" class="text-[0.85rem] text-text-muted font-bold uppercase tracking-wider">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" placeholder="¿En qué podemos ayudarte?" required 
+                                class="bg-bg-black border border-border-light p-4 text-base-white rounded text-[0.95rem] transition-all duration-300 focus:outline-none focus:border-primary-red focus:shadow-input-focus placeholder-gray-600 resize-y"></textarea>
                         </div>
 
-                        <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+                        <button type="submit" 
+                            class="mt-2 bg-primary-red text-white border-none py-4 px-8 text-[1rem] font-extrabold uppercase tracking-wide rounded cursor-pointer transition-all duration-300 hover:bg-primary-orange hover:-translate-y-0.5 hover:shadow-lg">
+                            Enviar Mensaje
+                        </button>
                     </form>
                 </div>
 
             </div>
         </div>
-    </section>
+    </main>
 
-    <footer>
-        <div class="sponsors-section">
-            <div class="estructura-de-secciones">
-                <h3 class="sponsors-title">Patrocinadores</h3>
-                <div class="sponsors-grid">
-                    <img src="../media/sponsors/blancos/dimalnox.png" alt="Sponsor 1" class="sponsor-logo">
-                    <img src="../media/sponsors/blancos/maderas vazquez.png" alt="Sponsor 2" class="sponsor-logo">
-                    <img src="../media/sponsors/blancos/marmoles barbeito.png" alt="Sponsor 3" class="sponsor-logo">
-                    <img src="../media/sponsors/blancos/rallycar.png" alt="Sponsor 4" class="sponsor-logo">
-                    <img src="../media/sponsors/blancos/senra sport.png" alt="Sponsor 5" class="sponsor-logo">
-                    <img src="../media/sponsors/blancos/ramon garcia.png" alt="Sponsor 6" class="sponsor-logo sponsor6">
-                    <img src="../media/sponsors/blancos/rgs europe.png" alt="Sponsor 7" class="sponsor-logo sponsor7">
-                    <img src="../media/sponsors/blancos/logoliñagar.png" alt="Sponsor Liñagar" class="sponsor-logo">
+    <footer class="bg-bg-black text-base-white border-t border-bg-dark-grey mt-0">
+        
+        <div class="bg-bg-card py-10 pb-[100px] [clip-path:polygon(0_0,100%_0,100%_85%,0_100%)]">
+            <div class="w-full max-w-[1200px] mx-auto px-5">
+                <h3 class="text-center text-base-white uppercase font-extrabold mb-10 tracking-[2px]">Patrocinadores</h3>
+                <div class="flex flex-wrap justify-center items-center gap-10 w-full">
+                    <img src="../media/sponsors/blancos/dimalnox.png" alt="Sponsor" class="h-[8vh] w-auto grayscale opacity-80 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
+                    <img src="../media/sponsors/blancos/maderas vazquez.png" alt="Sponsor" class="h-[8vh] w-auto grayscale opacity-80 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
+                    <img src="../media/sponsors/blancos/marmoles barbeito.png" alt="Sponsor" class="h-[8vh] w-auto grayscale opacity-80 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
+                    <img src="../media/sponsors/blancos/rallycar.png" alt="Sponsor" class="h-[8vh] w-auto grayscale opacity-80 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
+                    <img src="../media/sponsors/blancos/senra sport.png" alt="Sponsor" class="h-[8vh] w-auto grayscale opacity-80 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
+                    <img src="../media/sponsors/blancos/ramon garcia.png" alt="Sponsor" class="h-[18vh] w-auto grayscale opacity-80 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
+                    <img src="../media/sponsors/blancos/rgs europe.png" alt="Sponsor" class="h-[18vh] w-auto grayscale opacity-80 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
+                    <img src="../media/sponsors/blancos/logoliñagar.png" alt="Sponsor" class="h-[8vh] w-auto grayscale opacity-80 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
                 </div>
             </div>
         </div>
 
-        <div class="footer-main">
-            <div class="estructura-de-secciones">
-                <div class="footer-content">
+        <div class="py-16 pb-10 bg-bg-black">
+            <div class="w-full max-w-[1200px] mx-auto px-5">
+                <div class="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr] gap-10">
                     
-                    <div class="footer-column brand-col">
-                        <div class="footer-logo">
-                            <h2>DIEGO<br><span>GARCÍA</span></h2>
+                    <div>
+                        <div class="mb-4">
+                            <h2 class="text-2xl font-extrabold leading-none mb-4 text-base-white">DIEGO<br><span class="text-primary-red">GARCÍA</span></h2>
                         </div>
-                        <p class="footer-desc">
+                        <p class="text-white text-[0.9rem] max-w-[300px] mb-5">
                             Piloto oficial de Car Cross Galicia. Pasión, competitividad y técnica en cada carrera.
                         </p>
-                        <div class="social-icons">
-                            <a href="#" class="social-link">IG</a> <a href="#" class="social-link">FB</a>
-                            <a href="#" class="social-link">YT</a>
-                            <a href="#" class="social-link">X</a>
+                        <div class="flex gap-4">
+                            <a href="#" class="w-[35px] h-[35px] bg-bg-card flex items-center justify-center rounded-full text-base-white font-bold text-xs border border-bg-dark-grey transition-all duration-300 hover:bg-primary-red hover:border-primary-red hover:-translate-y-1 no-underline">IG</a>
+                            <a href="#" class="w-[35px] h-[35px] bg-bg-card flex items-center justify-center rounded-full text-base-white font-bold text-xs border border-bg-dark-grey transition-all duration-300 hover:bg-primary-red hover:border-primary-red hover:-translate-y-1 no-underline">FB</a>
+                            <a href="#" class="w-[35px] h-[35px] bg-bg-card flex items-center justify-center rounded-full text-base-white font-bold text-xs border border-bg-dark-grey transition-all duration-300 hover:bg-primary-red hover:border-primary-red hover:-translate-y-1 no-underline">YT</a>
+                            <a href="#" class="w-[35px] h-[35px] bg-bg-card flex items-center justify-center rounded-full text-base-white font-bold text-xs border border-bg-dark-grey transition-all duration-300 hover:bg-primary-red hover:border-primary-red hover:-translate-y-1 no-underline">X</a>
                         </div>
                     </div>
 
-                    <div class="footer-column links-col">
-                        <h4>Navegación</h4>
-                        <ul>
-                            <li><a href="index.html">Inicio</a></li>
-                            <li><a href="index.html#palmares">Palmarés</a></li>
-                            <li><a href="index.html#galeria">Galería</a></li>
-                            <li><a href="index.html#noticias">Noticias</a></li>
-                            <li><a href="coche.html">Coche</a></li>
+                    <div>
+                        <h4 class="text-primary-red text-[1.1rem] uppercase font-bold mb-5">Navegación</h4>
+                        <ul class="list-none p-0">
+                            <li class="mb-2.5"><a href="index.html" class="text-base-white no-underline text-[0.95rem] transition-colors duration-300 hover:text-primary-orange hover:pl-1">Inicio</a></li>
+                            <li class="mb-2.5"><a href="index.html#palmares" class="text-base-white no-underline text-[0.95rem] transition-colors duration-300 hover:text-primary-orange hover:pl-1">Palmarés</a></li>
+                            <li class="mb-2.5"><a href="index.html#galeria" class="text-base-white no-underline text-[0.95rem] transition-colors duration-300 hover:text-primary-orange hover:pl-1">Galería</a></li>
+                            <li class="mb-2.5"><a href="index.html#noticias" class="text-base-white no-underline text-[0.95rem] transition-colors duration-300 hover:text-primary-orange hover:pl-1">Noticias</a></li>
+                            <li class="mb-2.5"><a href="coche.html" class="text-base-white no-underline text-[0.95rem] transition-colors duration-300 hover:text-primary-orange hover:pl-1">Coche</a></li>
                         </ul>
                     </div>
 
-                    <div class="footer-column contact-col">
-                        <h4>Contacto</h4>
-                        <p>diegogarciamesia@gmail.com</p>
-                        <p>rg@gruporg.eu</p>
-                        <p>+34 881 25 56 53</p>
-                        <p>+34 626 15 61 46</p>
-                        <p>A Coruña, Galicia, España</p>
+                    <div>
+                        <h4 class="text-primary-red text-[1.1rem] uppercase font-bold mb-5">Contacto</h4>
+                        <p class="text-text-muted text-[0.95rem] mb-2.5">diegogarciamesia@gmail.com</p>
+                        <p class="text-text-muted text-[0.95rem] mb-2.5">rg@gruporg.eu</p>
+                        <p class="text-text-muted text-[0.95rem] mb-2.5">+34 881 25 56 53</p>
+                        <p class="text-text-muted text-[0.95rem] mb-2.5">+34 626 15 61 46</p>
+                        <p class="text-text-muted text-[0.95rem] mb-2.5">A Coruña, Galicia, España</p>
                     </div>
 
                 </div>
             </div>
         </div>
 
-        <div class="footer-bottom">
-            <div class="estructura-de-secciones">
+        <div class="border-t border-bg-card py-5 text-[0.8rem] text-[#666666]">
+            <div class="w-full max-w-[1200px] mx-auto px-5 flex flex-col md:flex-row justify-between items-center gap-2">
                 <p>&copy; 2026 Diego García. Todos los derechos reservados.</p>
-                <p class="designer-credit">Diseñado por <a href="#">Diego García Candal</a></p>
+                <p>Diseñado por <a href="#" class="text-primary-red no-underline">Diego García Candal</a></p>
             </div>
         </div>
+
     </footer>
 
     <script>
-        const header = document.querySelector('header');
+        const header = document.getElementById('main-header');
+        
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
-                header.classList.add('scrolled');
+                header.classList.remove('py-8', 'bg-gradient-to-b');
+                header.classList.add('py-4', 'bg-black/90', 'backdrop-blur-md', 'shadow-lg', 'border-b', 'border-white/5');
             } else {
-                header.classList.remove('scrolled');
+                header.classList.add('py-8', 'bg-gradient-to-b');
+                header.classList.remove('py-4', 'bg-black/90', 'backdrop-blur-md', 'shadow-lg', 'border-b', 'border-white/5');
             }
         });
     </script>
