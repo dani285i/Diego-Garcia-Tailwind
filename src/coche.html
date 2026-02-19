@@ -7,6 +7,8 @@
 
     <link rel="stylesheet" href="./assets/styles.css">
 
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <link rel="icon" type="image/png" href="../media/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="../media/favicon/favicon.svg" />
     <link rel="shortcut icon" href="../media/favicon/favicon.ico" />
@@ -50,133 +52,127 @@
         </div>
     </header>
 
-    <section class="coche-main">
+    <main class="pt-[140px] pb-20 bg-[var(--background-black)] flex items-center justify-center min-h-screen">
         <div class="estructura-de-secciones">
             
-            <div class="coche-titulo-container">
-                <h1>Life Live TN11</h1>
-                <p>Visualizador de fotos del coche</p>
+            <div class="text-center mb-[50px]">
+                <h1 class="text-5xl text-[var(--primary-red)] font-extrabold mb-2.5 uppercase">TN11</h1>
+                <p class="text-[var(--text-muted)] text-[1.1rem]">Explora mi coche desde diferentes puntos de vista</p>
             </div>
 
-            <div class="visor-card">
+            <div class="bg-[var(--background-card)] border border-[var(--background-dark-grey)] rounded-[10px] p-5 md:p-10 w-full max-w-[900px] mx-auto shadow-[0_0_30px_rgba(var(--background-black-rgb),0.5)] relative">
                 
-                <div class="visor-display">
-                    <img id="car-image" src="#" alt="Vista del Coche" class="visor-img">
+                <div class="w-full h-[300px] md:h-[400px] flex justify-center items-center mb-10 relative overflow-hidden">
+                    <img src="../media/img/Coche/coche-lateral.jpg" alt="Visor Coche" class="max-w-full max-h-full object-contain transition-all duration-300 drop-shadow-[0_15px_15px_rgba(var(--background-black-rgb),0.6)]">
                 </div>
 
-                <div class="visor-controls">
-                    
-                    <div class="btn-texto" id="btn-prev">
-                        <div class="btn-giro">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M15 18l-6-6 6-6"/>
-                            </svg>
-                        </div>
-                        <span>Anterior</span>
+                <div class="flex items-center justify-center gap-10 select-none">
+                    <div class="flex flex-col items-center gap-2.5 cursor-pointer group">
+                        <button class="bg-transparent border-2 border-[var(--primary-orange)] text-[var(--primary-orange)] w-[60px] h-[60px] rounded-full flex items-center justify-center transition-all duration-300 text-2xl group-hover:bg-[var(--primary-orange)] group-hover:text-[var(--text-light)] group-hover:shadow-[0_0_15px_rgba(var(--primary-orange-rgb),0.6)] group-hover:scale-110">
+                            &#8592;
+                        </button>
+                        <span class="text-[0.8rem] font-bold text-[var(--text-dark-muted)] uppercase transition-colors duration-300 group-hover:text-[var(--text-light)]">Girar</span>
                     </div>
 
-                    <div class="indicadores" id="indicadores-container">
-                        <div class="dot active"></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
+                    <div class="flex gap-2.5">
+                        <div class="w-3 h-3 bg-[var(--primary-red)] border border-[var(--primary-red)] rounded-full transition-colors duration-300 shadow-[0_0_10px_rgba(var(--primary-red-rgb),0.5)]"></div>
+                        <div class="w-3 h-3 bg-[var(--background-dark-grey)] border border-[var(--border-medium)] rounded-full transition-colors duration-300"></div>
+                        <div class="w-3 h-3 bg-[var(--background-dark-grey)] border border-[var(--border-medium)] rounded-full transition-colors duration-300"></div>
                     </div>
 
-                    <div class="btn-texto" id="btn-next">
-                        <div class="btn-giro">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M9 18l6-6-6-6"/>
-                            </svg>
-                        </div>
-                        <span>Siguiente</span>
+                    <div class="flex flex-col items-center gap-2.5 cursor-pointer group">
+                        <button class="bg-transparent border-2 border-[var(--primary-orange)] text-[var(--primary-orange)] w-[60px] h-[60px] rounded-full flex items-center justify-center transition-all duration-300 text-2xl group-hover:bg-[var(--primary-orange)] group-hover:text-[var(--text-light)] group-hover:shadow-[0_0_15px_rgba(var(--primary-orange-rgb),0.6)] group-hover:scale-110">
+                            &#8594;
+                        </button>
+                        <span class="text-[0.8rem] font-bold text-[var(--text-dark-muted)] uppercase transition-colors duration-300 group-hover:text-[var(--text-light)]">Girar</span>
                     </div>
-
                 </div>
 
-                <div class="specs-grid">
-                    <div class="spec-item" style="border-color: var(--primary-red);">
-                        <h3>Motor</h3>
-                        <p>MT09 2024 Optimizado</p>
+                <div class="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-5 mt-[60px] w-full">
+                    <div class="bg-[var(--background-dark-grey)] p-5 border-l-4 border-[var(--primary-red)] rounded-r-[5px]">
+                        <h3 class="text-[var(--base-white)] text-[1.1rem] mb-1">Chasis</h3>
+                        <p class="text-[var(--text-gray)] text-[0.9rem]">Estructura tubular FIA</p>
                     </div>
-                    <div class="spec-item" style="border-color: var(--primary-orange);">
-                        <h3>Chasis</h3>
-                        <p>Tubular Life Live TN11</p>
+                    <div class="bg-[var(--background-dark-grey)] p-5 border-l-4 border-[var(--primary-red)] rounded-r-[5px]">
+                        <h3 class="text-[var(--base-white)] text-[1.1rem] mb-1">Motor</h3>
+                        <p class="text-[var(--text-gray)] text-[0.9rem]">Suzuki MT09</p>
                     </div>
-                    <div class="spec-item" style="border-color: var(--base-white);">
-                        <h3>Peso</h3>
-                        <p>320kg (Normativa FIA)</p>
+                    <div class="bg-[var(--background-dark-grey)] p-5 border-l-4 border-[var(--primary-red)] rounded-r-[5px]">
+                        <h3 class="text-[var(--base-white)] text-[1.1rem] mb-1">Suspensión</h3>
+                        <p class="text-[var(--text-gray)] text-[0.9rem]">Reiger Racing 3 Vías</p>
                     </div>
                 </div>
 
             </div>
-
         </div>
-    </section>
+    </main>
 
-    <footer>
-        <div class="sponsors-section">
+    <footer class="bg-[var(--background-black)] text-[var(--base-white)] border-t border-[var(--background-dark-grey)] mt-0">
+    
+        <div class="bg-[var(--background-card)] pt-10 pb-[150px] [clip-path:polygon(0_0,100%_0,100%_85%,0_100%)]">
             <div class="estructura-de-secciones">
-                <h3 class="sponsors-title">Patrocinadores</h3>
-                <div class="sponsors-grid">
-                    <img src="../media/sponsors/blancos/dimalnox.png" alt="Sponsor 1" class="sponsor-logo">
-                    <img src="../media/sponsors/blancos/maderas vazquez.png" alt="Sponsor 2" class="sponsor-logo">
-                    <img src="../media/sponsors/blancos/marmoles barbeito.png" alt="Sponsor 3" class="sponsor-logo">
-                    <img src="../media/sponsors/blancos/rallycar.png" alt="Sponsor 4" class="sponsor-logo">
-                    <img src="../media/sponsors/blancos/senra sport.png" alt="Sponsor 5" class="sponsor-logo">
-                    <img src="../media/sponsors/blancos/ramon garcia.png" alt="Sponsor 6" class="sponsor-logo sponsor6">
-                    <img src="../media/sponsors/blancos/rgs europe.png" alt="Sponsor 7" class="sponsor-logo sponsor7">
-                    <img src="../media/sponsors/blancos/logoliñagar.png" alt="Sponsor Liñagar" class="sponsor-logo">
+                <h3 class="text-[var(--base-white)] text-center uppercase font-extrabold mb-10 tracking-[2px]">Patrocinadores</h3>
+                
+                <div class="flex flex-wrap justify-center items-center gap-10 w-full">
+                    <img src="../media/sponsors/blancos/dimalnox.png" alt="Sponsor 1" class="h-[8vh] w-auto grayscale opacity-80 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
+                    <img src="../media/sponsors/blancos/maderas vazquez.png" alt="Sponsor 2" class="h-[8vh] w-auto grayscale opacity-80 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
+                    <img src="../media/sponsors/blancos/marmoles barbeito.png" alt="Sponsor 3" class="h-[8vh] w-auto grayscale opacity-80 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
+                    <img src="../media/sponsors/blancos/rallycar.png" alt="Sponsor 4" class="h-[8vh] w-auto grayscale opacity-80 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
+                    <img src="../media/sponsors/blancos/senra sport.png" alt="Sponsor 5" class="h-[8vh] w-auto grayscale opacity-80 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
+                    <img src="../media/sponsors/blancos/ramon garcia.png" alt="Sponsor 6" class="h-[18vh] w-auto grayscale opacity-80 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
+                    <img src="../media/sponsors/blancos/rgs europe.png" alt="Sponsor 7" class="h-[18vh] w-auto grayscale opacity-80 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
+                    <img src="../media/sponsors/blancos/logoliñagar.png" alt="Sponsor 8" class="h-[8vh] w-auto grayscale opacity-80 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
                 </div>
             </div>
         </div>
 
-        <div class="footer-main">
+        <div class="py-[60px] pb-10 bg-[var(--background-black)]">
             <div class="estructura-de-secciones">
-                <div class="footer-content">
+                <div class="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr] gap-10">
                     
-                    <div class="footer-column brand-col">
-                        <div class="footer-logo">
-                            <h2>DIEGO<br><span>GARCÍA</span></h2>
+                    <div class="flex flex-col">
+                        <div class="mb-[15px]">
+                            <h2 class="text-2xl leading-none font-extrabold text-[var(--base-white)]">DIEGO<br><span class="text-[var(--primary-red)]">GARCÍA</span></h2>
                         </div>
-                        <p class="footer-desc">
+                        <p class="text-[var(--pure-white)] text-[0.9rem] max-w-[300px] mb-5">
                             Piloto oficial de Car Cross Galicia. Pasión, competitividad y técnica en cada carrera.
                         </p>
-                        <div class="social-icons">
-                            <a href="#" class="social-link">IG</a> <a href="#" class="social-link">FB</a>
-                            <a href="#" class="social-link">YT</a>
-                            <a href="#" class="social-link">X</a>
+                        <div class="flex gap-[15px]">
+                            <a href="#" class="w-[35px] h-[35px] bg-[var(--background-card)] flex items-center justify-center rounded-full text-[var(--base-white)] font-bold text-[0.8rem] border border-[var(--background-dark-grey)] transition-all duration-300 hover:bg-[var(--primary-red)] hover:border-[var(--primary-red)] hover:-translate-y-[3px]">IG</a>
+                            <a href="#" class="w-[35px] h-[35px] bg-[var(--background-card)] flex items-center justify-center rounded-full text-[var(--base-white)] font-bold text-[0.8rem] border border-[var(--background-dark-grey)] transition-all duration-300 hover:bg-[var(--primary-red)] hover:border-[var(--primary-red)] hover:-translate-y-[3px]">FB</a>
+                            <a href="#" class="w-[35px] h-[35px] bg-[var(--background-card)] flex items-center justify-center rounded-full text-[var(--base-white)] font-bold text-[0.8rem] border border-[var(--background-dark-grey)] transition-all duration-300 hover:bg-[var(--primary-red)] hover:border-[var(--primary-red)] hover:-translate-y-[3px]">YT</a>
+                            <a href="#" class="w-[35px] h-[35px] bg-[var(--background-card)] flex items-center justify-center rounded-full text-[var(--base-white)] font-bold text-[0.8rem] border border-[var(--background-dark-grey)] transition-all duration-300 hover:bg-[var(--primary-red)] hover:border-[var(--primary-red)] hover:-translate-y-[3px]">X</a>
                         </div>
                     </div>
 
-                    <div class="footer-column links-col">
-                        <h4>Navegación</h4>
-                        <ul>
-                            <li><a href="#">Inicio</a></li>
-                            <li><a href="#">Palmarés</a></li>
-                            <li><a href="#">Galería</a></li>
-                            <li><a href="#">Noticias</a></li>
-                            <li><a href="#">Contacto</a></li>
+                    <div>
+                        <h4 class="text-[var(--primary-red)] text-[1.1rem] uppercase mb-5 font-bold">Navegación</h4>
+                        <ul class="list-none">
+                            <li class="mb-2.5"><a href="#" class="text-[var(--base-white)] text-[0.95rem] transition-all duration-300 hover:text-[var(--primary-orange)] hover:pl-[5px]">Inicio</a></li>
+                            <li class="mb-2.5"><a href="#" class="text-[var(--base-white)] text-[0.95rem] transition-all duration-300 hover:text-[var(--primary-orange)] hover:pl-[5px]">Palmarés</a></li>
+                            <li class="mb-2.5"><a href="#" class="text-[var(--base-white)] text-[0.95rem] transition-all duration-300 hover:text-[var(--primary-orange)] hover:pl-[5px]">Galería</a></li>
+                            <li class="mb-2.5"><a href="#" class="text-[var(--base-white)] text-[0.95rem] transition-all duration-300 hover:text-[var(--primary-orange)] hover:pl-[5px]">Noticias</a></li>
+                            <li class="mb-2.5"><a href="#" class="text-[var(--base-white)] text-[0.95rem] transition-all duration-300 hover:text-[var(--primary-orange)] hover:pl-[5px]">Contacto</a></li>
                         </ul>
                     </div>
 
-                    <div class="footer-column contact-col">
-                        <h4>Contacto</h4>
-                        <p>diegogarciamesia@gmail.com</p>
-                        <p>rg@gruporg.eu</p>
-                        <p>+34 881 25 56 53</p>
-                        <p>+34 626 15 61 46</p>
-                        <p>A Coruña, Galicia, España</p>
+                    <div>
+                        <h4 class="text-[var(--primary-red)] text-[1.1rem] uppercase mb-5 font-bold">Contacto</h4>
+                        <p class="text-[var(--text-muted)] text-[0.95rem] mb-2.5">diegogarciamesia@gmail.com</p>
+                        <p class="text-[var(--text-muted)] text-[0.95rem] mb-2.5">rg@gruporg.eu</p>
+                        <p class="text-[var(--text-muted)] text-[0.95rem] mb-2.5">+34 881 25 56 53</p>
+                        <p class="text-[var(--text-muted)] text-[0.95rem] mb-2.5">+34 626 15 61 46</p>
+                        <p class="text-[var(--text-muted)] text-[0.95rem] mb-2.5">A Coruña, Galicia, España</p>
                     </div>
 
                 </div>
             </div>
         </div>
 
-        <div class="footer-bottom">
-            <div class="estructura-de-secciones">
+        <div class="border-t border-[var(--background-card)] py-5 text-[0.8rem] text-[var(--text-footer)]">
+            <div class="estructura-de-secciones flex flex-col md:flex-row justify-between items-center gap-4">
                 <p>&copy; 2026 Diego García. Todos los derechos reservados.</p>
-                <p class="designer-credit">Diseñado por <a href="#">Diego García Candal</a></p>
+                <p>Diseñado por <a href="#" class="text-[var(--primary-red)] no-underline">Diego García Candal</a></p>
             </div>
         </div>
     </footer>

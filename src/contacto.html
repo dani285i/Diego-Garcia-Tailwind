@@ -7,6 +7,8 @@
 
     <link rel="stylesheet" href="./assets/styles.css">
 
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <link rel="icon" type="image/png" href="../media/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="../media/favicon/favicon.svg" />
     <link rel="shortcut icon" href="../media/favicon/favicon.ico" />
@@ -133,69 +135,72 @@
         </div>
     </section>
 
-    <footer>
-        <div class="sponsors-section">
+    <footer class="bg-[var(--background-black)] text-[var(--base-white)] border-t border-[var(--background-dark-grey)] mt-0">
+        
+        <div class="bg-[var(--background-card)] pt-10 pb-[150px] [clip-path:polygon(0_0,100%_0,100%_85%,0_100%)]">
             <div class="estructura-de-secciones">
-                <h3 class="sponsors-title">Patrocinadores</h3>
-                <div class="sponsors-grid">
-                    <img src="../media/sponsors/blancos/dimalnox.png" alt="Sponsor 1" class="sponsor-logo">
-                    <img src="../media/sponsors/blancos/maderas vazquez.png" alt="Sponsor 2" class="sponsor-logo">
-                    <img src="../media/sponsors/blancos/marmoles barbeito.png" alt="Sponsor 3" class="sponsor-logo">
-                    <img src="../media/sponsors/blancos/rallycar.png" alt="Sponsor 4" class="sponsor-logo">
-                    <img src="../media/sponsors/blancos/senra sport.png" alt="Sponsor 5" class="sponsor-logo">
-                    <img src="../media/sponsors/blancos/ramon garcia.png" alt="Sponsor 6" class="sponsor-logo sponsor6">
-                    <img src="../media/sponsors/blancos/rgs europe.png" alt="Sponsor 7" class="sponsor-logo sponsor7">
-                    <img src="../media/sponsors/blancos/logoliñagar.png" alt="Sponsor Liñagar" class="sponsor-logo">
+                <h3 class="text-[var(--base-white)] text-center uppercase font-extrabold mb-10 tracking-[2px]">Patrocinadores</h3>
+                
+                <div class="flex flex-wrap justify-center items-center gap-10 w-full">
+                    <img src="../media/sponsors/blancos/dimalnox.png" alt="Sponsor 1" class="h-[8vh] w-auto grayscale opacity-80 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
+                    <img src="../media/sponsors/blancos/maderas vazquez.png" alt="Sponsor 2" class="h-[8vh] w-auto grayscale opacity-80 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
+                    <img src="../media/sponsors/blancos/marmoles barbeito.png" alt="Sponsor 3" class="h-[8vh] w-auto grayscale opacity-80 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
+                    <img src="../media/sponsors/blancos/rallycar.png" alt="Sponsor 4" class="h-[8vh] w-auto grayscale opacity-80 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
+                    <img src="../media/sponsors/blancos/senra sport.png" alt="Sponsor 5" class="h-[8vh] w-auto grayscale opacity-80 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
+                    <img src="../media/sponsors/blancos/ramon garcia.png" alt="Sponsor 6" class="h-[18vh] w-auto grayscale opacity-80 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
+                    <img src="../media/sponsors/blancos/rgs europe.png" alt="Sponsor 7" class="h-[18vh] w-auto grayscale opacity-80 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
+                    <img src="../media/sponsors/blancos/logoliñagar.png" alt="Sponsor 8" class="h-[8vh] w-auto grayscale opacity-80 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
                 </div>
             </div>
         </div>
 
-        <div class="footer-main">
+        <div class="py-[60px] pb-10 bg-[var(--background-black)]">
             <div class="estructura-de-secciones">
-                <div class="footer-content">
+                <div class="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr] gap-10">
                     
-                    <div class="footer-column brand-col">
-                        <div class="footer-logo">
-                            <h2>DIEGO<br><span>GARCÍA</span></h2>
+                    <div class="flex flex-col">
+                        <div class="mb-[15px]">
+                            <h2 class="text-2xl leading-none font-extrabold text-[var(--base-white)]">DIEGO<br><span class="text-[var(--primary-red)]">GARCÍA</span></h2>
                         </div>
-                        <p class="footer-desc">
+                        <p class="text-[var(--pure-white)] text-[0.9rem] max-w-[300px] mb-5">
                             Piloto oficial de Car Cross Galicia. Pasión, competitividad y técnica en cada carrera.
                         </p>
-                        <div class="social-icons">
-                            <a href="#" class="social-link">IG</a> <a href="#" class="social-link">FB</a>
-                            <a href="#" class="social-link">YT</a>
-                            <a href="#" class="social-link">X</a>
+                        <div class="flex gap-[15px]">
+                            <a href="#" class="w-[35px] h-[35px] bg-[var(--background-card)] flex items-center justify-center rounded-full text-[var(--base-white)] font-bold text-[0.8rem] border border-[var(--background-dark-grey)] transition-all duration-300 hover:bg-[var(--primary-red)] hover:border-[var(--primary-red)] hover:-translate-y-[3px]">IG</a>
+                            <a href="#" class="w-[35px] h-[35px] bg-[var(--background-card)] flex items-center justify-center rounded-full text-[var(--base-white)] font-bold text-[0.8rem] border border-[var(--background-dark-grey)] transition-all duration-300 hover:bg-[var(--primary-red)] hover:border-[var(--primary-red)] hover:-translate-y-[3px]">FB</a>
+                            <a href="#" class="w-[35px] h-[35px] bg-[var(--background-card)] flex items-center justify-center rounded-full text-[var(--base-white)] font-bold text-[0.8rem] border border-[var(--background-dark-grey)] transition-all duration-300 hover:bg-[var(--primary-red)] hover:border-[var(--primary-red)] hover:-translate-y-[3px]">YT</a>
+                            <a href="#" class="w-[35px] h-[35px] bg-[var(--background-card)] flex items-center justify-center rounded-full text-[var(--base-white)] font-bold text-[0.8rem] border border-[var(--background-dark-grey)] transition-all duration-300 hover:bg-[var(--primary-red)] hover:border-[var(--primary-red)] hover:-translate-y-[3px]">X</a>
                         </div>
                     </div>
 
-                    <div class="footer-column links-col">
-                        <h4>Navegación</h4>
-                        <ul>
-                            <li><a href="index.html">Inicio</a></li>
-                            <li><a href="index.html#palmares">Palmarés</a></li>
-                            <li><a href="index.html#galeria">Galería</a></li>
-                            <li><a href="index.html#noticias">Noticias</a></li>
-                            <li><a href="coche.html">Coche</a></li>
+                    <div>
+                        <h4 class="text-[var(--primary-red)] text-[1.1rem] uppercase mb-5 font-bold">Navegación</h4>
+                        <ul class="list-none">
+                            <li class="mb-2.5"><a href="#" class="text-[var(--base-white)] text-[0.95rem] transition-all duration-300 hover:text-[var(--primary-orange)] hover:pl-[5px]">Inicio</a></li>
+                            <li class="mb-2.5"><a href="#" class="text-[var(--base-white)] text-[0.95rem] transition-all duration-300 hover:text-[var(--primary-orange)] hover:pl-[5px]">Palmarés</a></li>
+                            <li class="mb-2.5"><a href="#" class="text-[var(--base-white)] text-[0.95rem] transition-all duration-300 hover:text-[var(--primary-orange)] hover:pl-[5px]">Galería</a></li>
+                            <li class="mb-2.5"><a href="#" class="text-[var(--base-white)] text-[0.95rem] transition-all duration-300 hover:text-[var(--primary-orange)] hover:pl-[5px]">Noticias</a></li>
+                            <li class="mb-2.5"><a href="#" class="text-[var(--base-white)] text-[0.95rem] transition-all duration-300 hover:text-[var(--primary-orange)] hover:pl-[5px]">Contacto</a></li>
                         </ul>
                     </div>
 
-                    <div class="footer-column contact-col">
-                        <h4>Contacto</h4>
-                        <p>diegogarciamesia@gmail.com</p>
-                        <p>rg@gruporg.eu</p>
-                        <p>+34 881 25 56 53</p>
-                        <p>+34 626 15 61 46</p>
-                        <p>A Coruña, Galicia, España</p>
+                    <div>
+                        <h4 class="text-[var(--primary-red)] text-[1.1rem] uppercase mb-5 font-bold">Contacto</h4>
+                        <p class="text-[var(--text-muted)] text-[0.95rem] mb-2.5">diegogarciamesia@gmail.com</p>
+                        <p class="text-[var(--text-muted)] text-[0.95rem] mb-2.5">rg@gruporg.eu</p>
+                        <p class="text-[var(--text-muted)] text-[0.95rem] mb-2.5">+34 881 25 56 53</p>
+                        <p class="text-[var(--text-muted)] text-[0.95rem] mb-2.5">+34 626 15 61 46</p>
+                        <p class="text-[var(--text-muted)] text-[0.95rem] mb-2.5">A Coruña, Galicia, España</p>
                     </div>
 
                 </div>
             </div>
         </div>
 
-        <div class="footer-bottom">
-            <div class="estructura-de-secciones">
+        <div class="border-t border-[var(--background-card)] py-5 text-[0.8rem] text-[var(--text-footer)]">
+            <div class="estructura-de-secciones flex flex-col md:flex-row justify-between items-center gap-4">
                 <p>&copy; 2026 Diego García. Todos los derechos reservados.</p>
-                <p class="designer-credit">Diseñado por <a href="#">Diego García Candal</a></p>
+                <p>Diseñado por <a href="#" class="text-[var(--primary-red)] no-underline">Diego García Candal</a></p>
             </div>
         </div>
     </footer>
