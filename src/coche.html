@@ -1,112 +1,170 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="./assets/styles.css">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <link rel="icon" type="image/png" href="../media/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="../media/favicon/favicon.svg" />
-    <link rel="shortcut icon" href="../media/favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="../media/favicon/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="Diego García" />
-    <link rel="manifest" href="../media/favicon/site.webmanifest" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    <title>Coche - TN11 | Diego García</title>
+    <link rel="icon" type="image/png" href="../media/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../media/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="../media/favicon/favicon.ico" />
+    
+    <title>Vehículo - TN11 | Diego García</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary-red': '#ff2021',
+                        'primary-orange': '#ff6200',
+                        'base-white': '#f9f9f9',
+                        'text-light': '#fff7f2',
+                        'text-muted': '#cccccc',
+                        'bg-black': '#000000',
+                        'bg-dark-grey': '#1a1a1a',
+                        'bg-card': '#1f1f1f',
+                        'border-dark': '#313131',
+                    },
+                    boxShadow: {
+                        'glow-red': '0 10px 25px rgba(255, 32, 33, 0.15)',
+                        'glow-orange': '0 0 20px rgba(255, 98, 0, 0.5)',
+                        'card-depth': '0 15px 35px rgba(0, 0, 0, 0.5)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .dot-pattern-orange {
+            background-image: radial-gradient(#ff6200 2px, transparent 2px);
+            background-size: 15px 15px;
+        }
+        .fade-out {
+            opacity: 0.2;
+            transform: scale(0.95);
+        }
+        .dot.active {
+            background-color: #ff2021;
+            box-shadow: 0 0 10px rgba(255, 32, 33, 0.5);
+            border-color: #ff2021;
+        }
+    </style>
 </head>
 
-<body>
+<body class="bg-bg-black text-text-light font-montserrat leading-relaxed antialiased">
 
-    <header>
-        <div class="estructura-de-secciones">
-            <div id="header-title">
-                <a href="index.html" id="header-title-anchor">
-                    <h1>DIEGO</h1>
-                    <h2>GARCÍA</h2>
+    <header id="main-header" class="fixed top-0 left-0 w-full z-50 py-8 transition-all duration-300 ease-in-out bg-gradient-to-b from-black/90 to-transparent">
+        <div class="w-full max-w-[1200px] mx-auto px-5 flex justify-between items-center">
+            <div class="text-center group">
+                <a href="index.html" class="no-underline text-base-white block">
+                    <h1 class="text-[1.8rem] font-extrabold uppercase tracking-wide mb-[-5px] leading-tight">Diego</h1>
+                    <h2 class="text-[1.8rem] font-normal text-primary-red mt-[-5px] leading-tight group-hover:text-primary-orange transition-colors duration-300">García</h2>
                 </a>
             </div>
-
-            <nav>
-                <ul>
-                    <li><a href="index.html" style="text-decoration: none; color: inherit;">Inicio</a></li>
-                    <li><a href="index.html#palmares" style="text-decoration: none; color: inherit;">Palmarés</a></li>
-                    <li><a href="index.html#galeria" style="text-decoration: none; color: inherit;">Galería</a></li>
-                    <li><a href="index.html#noticias" style="text-decoration: none; color: inherit;">Noticias</a></li>
-                    <li style="color: var(--primary-red);">Vehículo</li> 
-                    <li><a href="contacto.html" style="text-decoration: none; color: inherit;">Contacto</a></li>
-                    <li class="header-logo-container">
-                        <img src="../media/logos/Logo Diego Blanco.png" alt="Logo" class="header-logo logo-main">
-                        <img src="../media/logos/Logo Diego Rojo.png" alt="Logo Hover" class="header-logo logo-hover">
+            <nav class="hidden md:block">
+                <ul class="flex items-center gap-6 list-none m-0 p-0">
+                    <li><a href="index.html" class="text-sm font-medium uppercase hover:text-primary-red transition-colors duration-300">Inicio</a></li>
+                    <li><a href="index.html#palmares" class="text-sm font-medium uppercase hover:text-primary-red transition-colors duration-300">Palmarés</a></li>
+                    <li><a href="index.html#galeria" class="text-sm font-medium uppercase hover:text-primary-red transition-colors duration-300">Galería</a></li>
+                    <li><a href="index.html#noticias" class="text-sm font-medium uppercase hover:text-primary-red transition-colors duration-300">Noticias</a></li>
+                    <li><span class="text-sm font-medium uppercase text-primary-red">Vehículo</span></li>
+                    <li><a href="contacto.html" class="text-sm font-medium uppercase hover:text-primary-red transition-colors duration-300">Contacto</a></li>
+                    <li class="relative w-[10vh] h-[10vh] ml-4 cursor-pointer group">
+                        <img src="../media/logos/Logo Diego Blanco.png" alt="Logo" class="absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-500 ease-in-out group-hover:opacity-0">
+                        <img src="../media/logos/Logo Diego Rojo.png" alt="Logo Hover" class="absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100">
                     </li>
-                </ul>
+                </ul>   
             </nav>
         </div>
     </header>
 
-    <main class="pt-[140px] pb-20 bg-[var(--background-black)] flex items-center justify-center min-h-screen">
-        <div class="estructura-de-secciones">
-            
-            <div class="text-center mb-[50px]">
-                <h1 class="text-5xl text-[var(--primary-red)] font-extrabold mb-2.5 uppercase">TN11</h1>
-                <p class="text-[var(--text-muted)] text-[1.1rem]">Explora mi coche desde diferentes puntos de vista</p>
+    <main class="pt-[160px] pb-20">
+        <section class="w-full max-w-[1200px] mx-auto px-5 mb-24">
+            <div class="text-center mb-12">
+                <h1 class="text-5xl md:text-6xl text-primary-red font-extrabold mb-4 uppercase tracking-tighter">Life Live <span class="text-base-white">TN11</span></h1>
+                <p class="text-text-muted text-lg max-w-2xl mx-auto">Explora la ingeniería y el diseño del vehículo con el que compito en el Campeonato de España de Autocross.</p>
             </div>
 
-            <div class="bg-[var(--background-card)] border border-[var(--background-dark-grey)] rounded-[10px] p-5 md:p-10 w-full max-w-[900px] mx-auto shadow-[0_0_30px_rgba(var(--background-black-rgb),0.5)] relative">
-                
-                <div class="w-full h-[300px] md:h-[400px] flex justify-center items-center mb-10 relative overflow-hidden">
-                    <img src="../media/img/Coche/coche-lateral.jpg" alt="Visor Coche" class="max-w-full max-h-full object-contain transition-all duration-300 drop-shadow-[0_15px_15px_rgba(var(--background-black-rgb),0.6)]">
+            <div class="bg-bg-card border border-bg-dark-grey rounded-2xl p-6 md:p-12 shadow-card-depth relative">
+                <div class="w-full h-[300px] md:h-[500px] flex justify-center items-center mb-12 relative overflow-hidden">
+                    <img id="car-image" src="../media/img/Coche/coche-lateral.jpg" alt="Visor Coche" class="max-w-full max-h-full object-contain transition-all duration-300 drop-shadow-[0_20px_30px_rgba(0,0,0,0.8)]">
                 </div>
 
-                <div class="flex items-center justify-center gap-10 select-none">
-                    <div class="flex flex-col items-center gap-2.5 cursor-pointer group">
-                        <button class="bg-transparent border-2 border-[var(--primary-orange)] text-[var(--primary-orange)] w-[60px] h-[60px] rounded-full flex items-center justify-center transition-all duration-300 text-2xl group-hover:bg-[var(--primary-orange)] group-hover:text-[var(--text-light)] group-hover:shadow-[0_0_15px_rgba(var(--primary-orange-rgb),0.6)] group-hover:scale-110">
+                <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 select-none">
+                    <div id="btn-prev" class="flex flex-col items-center gap-3 cursor-pointer group">
+                        <button class="bg-transparent border-2 border-primary-orange text-primary-orange w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 text-2xl group-hover:bg-primary-orange group-hover:text-white group-hover:shadow-glow-orange group-hover:scale-110">
                             &#8592;
                         </button>
-                        <span class="text-[0.8rem] font-bold text-[var(--text-dark-muted)] uppercase transition-colors duration-300 group-hover:text-[var(--text-light)]">Girar</span>
+                        <span class="text-xs font-bold text-text-muted uppercase tracking-widest transition-colors duration-300 group-hover:text-white">Anterior</span>
                     </div>
 
-                    <div class="flex gap-2.5">
-                        <div class="w-3 h-3 bg-[var(--primary-red)] border border-[var(--primary-red)] rounded-full transition-colors duration-300 shadow-[0_0_10px_rgba(var(--primary-red-rgb),0.5)]"></div>
-                        <div class="w-3 h-3 bg-[var(--background-dark-grey)] border border-[var(--border-medium)] rounded-full transition-colors duration-300"></div>
-                        <div class="w-3 h-3 bg-[var(--background-dark-grey)] border border-[var(--border-medium)] rounded-full transition-colors duration-300"></div>
+                    <div class="flex gap-3">
+                        <div class="dot w-3 h-3 bg-bg-dark-grey border border-border-dark rounded-full transition-all duration-300 cursor-pointer"></div>
+                        <div class="dot w-3 h-3 bg-bg-dark-grey border border-border-dark rounded-full transition-all duration-300 cursor-pointer"></div>
+                        <div class="dot w-3 h-3 bg-bg-dark-grey border border-border-dark rounded-full transition-all duration-300 cursor-pointer"></div>
+                        <div class="dot w-3 h-3 bg-bg-dark-grey border border-border-dark rounded-full transition-all duration-300 cursor-pointer"></div>
+                        <div class="dot w-3 h-3 bg-bg-dark-grey border border-border-dark rounded-full transition-all duration-300 cursor-pointer"></div>
                     </div>
 
-                    <div class="flex flex-col items-center gap-2.5 cursor-pointer group">
-                        <button class="bg-transparent border-2 border-[var(--primary-orange)] text-[var(--primary-orange)] w-[60px] h-[60px] rounded-full flex items-center justify-center transition-all duration-300 text-2xl group-hover:bg-[var(--primary-orange)] group-hover:text-[var(--text-light)] group-hover:shadow-[0_0_15px_rgba(var(--primary-orange-rgb),0.6)] group-hover:scale-110">
+                    <div id="btn-next" class="flex flex-col items-center gap-3 cursor-pointer group">
+                        <button class="bg-transparent border-2 border-primary-orange text-primary-orange w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 text-2xl group-hover:bg-primary-orange group-hover:text-white group-hover:shadow-glow-orange group-hover:scale-110">
                             &#8594;
                         </button>
-                        <span class="text-[0.8rem] font-bold text-[var(--text-dark-muted)] uppercase transition-colors duration-300 group-hover:text-[var(--text-light)]">Girar</span>
+                        <span class="text-xs font-bold text-text-muted uppercase tracking-widest transition-colors duration-300 group-hover:text-white">Siguiente</span>
                     </div>
                 </div>
-
-                <div class="specs-grid">
-                    <div class="spec-item" style="border-color: var(--primary-red);">
-                        <h3>Motor</h3>
-                        <p>Yamaha MT09 850cc</p>
-                    </div>
-                    <div class="spec-item" style="border-color: var(--primary-orange);">
-                        <h3>Chasis</h3>
-                        <p>Life Live TN11</p>
-                    </div>
-                    <div class="spec-item" style="border-color: var(--base-white);">
-                        <h3>Peso</h3>
-                        <p>330kg</p>
-                    </div>
-                </div>
-
             </div>
-        </div>
+        </section>
+
+        <section class="relative py-24 bg-bg-black overflow-hidden z-10">
+            <div class="absolute -top-12 -right-5 text-[15rem] md:text-[25rem] font-black text-white/5 select-none -z-10 leading-none pointer-events-none">TN11</div>
+            
+            <div class="w-full max-w-[1200px] mx-auto px-5">
+                <div class="grid grid-cols-1 md:grid-cols-[1fr_1.2fr] gap-16 items-center">
+                    
+                    <div class="relative flex justify-center items-center p-5 group order-2 md:order-1">
+                        <div class="absolute top-[5%] left-0 w-[90%] h-[90%] border-[3px] border-primary-orange rounded-xl -z-10 transition-all duration-500 group-hover:translate-x-4 group-hover:translate-y-4 group-hover:border-primary-red"></div>
+                        <div class="absolute -bottom-2.5 left-[5%] w-[120px] h-[120px] dot-pattern-orange opacity-40 -z-10 transition-all duration-500 group-hover:-translate-x-4 group-hover:-translate-y-4 group-hover:opacity-80"></div>
+                        <img src="../media/img/Coche/coche-closeup.jpg" alt="Detalle TN11" class="w-full max-w-[450px] h-auto rounded-lg shadow-card-depth relative z-10 object-cover transition-all duration-500 group-hover:-translate-y-2 group-hover:scale-[1.02]">
+                    </div>
+
+                    <div class="relative bg-gradient-to-br from-bg-card to-[#0a0a0a] p-8 md:p-12 rounded-xl border-r-4 border-primary-red shadow-card-depth z-20 order-1 md:order-2">
+                        <span class="inline-block text-primary-orange text-sm font-bold uppercase tracking-[2px] mb-2.5">Especificaciones Técnicas</span>
+                        <h2 class="text-4xl text-base-white font-extrabold uppercase leading-tight mb-8">ADN de <span class="text-primary-red">Competición</span></h2>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4 p-4 bg-white/5 rounded-lg border-l-2 border-primary-red">
+                                <div>
+                                    <h3 class="text-base-white font-bold uppercase text-sm">Motor</h3>
+                                    <p class="text-text-muted">Yamaha MT09 850cc. Optimizado para una entrega de potencia explosiva en circuitos de tierra.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4 p-4 bg-white/5 rounded-lg border-l-2 border-primary-orange">
+                                <div>
+                                    <h3 class="text-base-white font-bold uppercase text-sm">Chasis y Peso</h3>
+                                    <p class="text-text-muted">Estructura Life Live TN11 de alta resistencia. Peso total de 330kg para una agilidad máxima.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4 p-4 bg-white/5 rounded-lg border-l-2 border-base-white">
+                                <div>
+                                    <h3 class="text-base-white font-bold uppercase text-sm">Transmisión</h3>
+                                    <p class="text-text-muted">Caja secuencial de 6 velocidades con desarrollos específicos para Car Cross.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="bg-bg-black text-base-white border-t border-bg-dark-grey mt-0">
@@ -184,71 +242,40 @@
     </footer>
 
     <script>
-
         document.addEventListener('DOMContentLoaded', () => {
-
             const carImages = [
-                "../media/img/Coche/vista-frente.png",
+                "../media/img/Coche/coche-lateral.jpg",
                 "../media/img/Coche/coche-closeup.jpg",
                 "../media/img/Coche/coche-palanca-de-cambios.jpg",
                 "../media/img/Coche/coche-salpicadero.jpg",
                 "../media/img/Coche/coche-rueda.jpg"
             ];
 
-            const fallbackImage = "../media/img/Coche/coche-lateral.jpg";
-
             const imgElement = document.getElementById('car-image');
             const prevBtn = document.getElementById('btn-prev');
             const nextBtn = document.getElementById('btn-next');
             const dots = document.querySelectorAll('.dot');
-
             let currentIndex = 0;
 
-            updateImage(false);
-
             function updateImage(animate = true) {
-                if (animate) {
-                    imgElement.classList.add('fade-out');
-                }
+                if (animate) imgElement.classList.add('fade-out');
 
                 setTimeout(() => {
                     imgElement.src = carImages[currentIndex];
-                    
                     dots.forEach((dot, index) => {
-                        if (index === currentIndex) {
-                            dot.classList.add('active');
-                        } else {
-                            dot.classList.remove('active');
-                        }
+                        index === currentIndex ? dot.classList.add('active') : dot.classList.remove('active');
                     });
-
-                    imgElement.onerror = function() {
-                        this.src = fallbackImage;
-                    };
-
-                    imgElement.onload = () => {
-                        imgElement.classList.remove('fade-out');
-                    };
-
-                    setTimeout(() => imgElement.classList.remove('fade-out'), 50);
-
+                    imgElement.onload = () => imgElement.classList.remove('fade-out');
                 }, animate ? 300 : 0);
             }
 
-
             nextBtn.addEventListener('click', () => {
-                currentIndex++;
-                if (currentIndex >= carImages.length) {
-                    currentIndex = 0;
-                }
+                currentIndex = (currentIndex + 1) % carImages.length;
                 updateImage();
             });
 
             prevBtn.addEventListener('click', () => {
-                currentIndex--;
-                if (currentIndex < 0) {
-                    currentIndex = carImages.length - 1;
-                }
+                currentIndex = (currentIndex - 1 + carImages.length) % carImages.length;
                 updateImage();
             });
 
@@ -261,18 +288,19 @@
                 });
             });
 
+            updateImage(false);
         });
 
-        const header = document.querySelector('header');
+        const header = document.getElementById('main-header');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
-                header.classList.add('scrolled');
+                header.classList.remove('py-8', 'bg-gradient-to-b');
+                header.classList.add('py-4', 'bg-black/95', 'backdrop-blur-md', 'shadow-lg');
             } else {
-                header.classList.remove('scrolled');
+                header.classList.add('py-8', 'bg-gradient-to-b');
+                header.classList.remove('py-4', 'bg-black/95', 'backdrop-blur-md', 'shadow-lg');
             }
         });
-
     </script>
-
 </body>
 </html>
