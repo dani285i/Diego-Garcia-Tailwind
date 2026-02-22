@@ -8,9 +8,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <link rel="icon" type="image/png" href="../media/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="../media/favicon/favicon.svg" />
-    <link rel="shortcut icon" href="../media/favicon/favicon.ico" />
+    <link rel="icon" type="image/png" href="../media/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/svg+xml" href="../media/favicon/favicon.svg">
+    <link rel="shortcut icon" href="../media/favicon/favicon.ico">
     
     <title>Diego García | Web Oficial</title>
 
@@ -62,9 +62,9 @@
         <div class="w-full max-w-[1200px] mx-auto px-5 flex justify-between items-center">
             
             <div class="text-center group">
-                <a href="#" class="no-underline text-base-white block">
-                    <h1 class="text-[1.8rem] font-extrabold uppercase tracking-wide mb-[-5px] leading-tight">Diego</h1>
-                    <h2 class="text-[1.8rem] font-normal text-primary-red mt-[-5px] leading-tight group-hover:text-primary-orange transition-colors duration-300">García</h2>
+                <a href="index.html" class="no-underline text-base-white block">
+                    <span class="block text-[1.8rem] font-extrabold uppercase tracking-wide mb-[-5px] leading-tight">Diego</span>
+                    <span class="block text-[1.8rem] font-normal text-primary-red mt-[-5px] leading-tight group-hover:text-primary-orange transition-colors duration-300">García</span>
                 </a>
             </div>
 
@@ -78,8 +78,8 @@
                     <li><a href="contacto.html" class="text-sm font-medium uppercase hover:text-primary-red transition-colors duration-300">Contacto</a></li>
                     
                     <li class="relative w-[10vh] h-[10vh] ml-4 cursor-pointer group">
-                        <img src="../media/logos/Logo Diego Blanco.png" alt="Logo" class="absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-500 ease-in-out group-hover:opacity-0">
-                        <img src="../media/logos/Logo Diego Rojo.png" alt="Logo Hover" class="absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100">
+                        <img src="../media/logos/Logo-Diego-Blanco.png" alt="Logo" class="absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-500 ease-in-out group-hover:opacity-0">
+                        <img src="../media/logos/Logo-Diego-Rojo.png" alt="Logo Hover" class="absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100">
                     </li>
                 </ul>   
             </nav>
@@ -93,17 +93,18 @@
     </header>
 
     <section id="inicio" class="relative h-screen w-full flex items-center justify-center overflow-hidden group cursor-default">
-        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover -z-10 opacity-50 transition-transform duration-1000 ease-out group-hover:scale-110">
+      <video autoplay muted loop playsinline aria-hidden="true" class="absolute inset-0 w-full h-full object-cover -z-10 opacity-50 transition-transform duration-1000 ease-out group-hover:scale-110">
             <source src="../media/vids/video-de-diego.mp4" type="video/mp4">
+            <track kind="captions" src="../media/vids/subtitulos.vtt" srclang="es" label="Español">
             Tu navegador no soporta videos HTML5.
         </video>
         
         <div class="absolute inset-0 bg-black/30 -z-10 transition-colors duration-700 group-hover:bg-black/60"></div>
         
         <div class="relative z-10 text-center px-5 opacity-0 translate-y-10 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-1000 ease-out pointer-events-none">
-            <h2 class="text-5xl md:text-8xl font-black text-base-white uppercase tracking-tighter leading-none mb-4">
+           <h1 class="text-5xl md:text-8xl font-black text-base-white uppercase tracking-tighter leading-none mb-4">
                 DIEGO <span class="text-primary-red">GARCÍA</span> CANDAL
-            </h2>
+            </h1>
             
             <div class="h-1 w-0 bg-primary-red mx-auto mb-6 group-hover:w-32 transition-all duration-1000 delay-300 ease-in-out"></div>
             
@@ -145,7 +146,7 @@
         </div>
     </section>
 
-    <section class="bg-base-white py-24 px-5 [clip-path:polygon(0_0,0%_101%,100%_100.2%)]"></section>
+    <div class="bg-base-white py-24 px-5 [clip-path:polygon(0_0,0%_101%,100%_100.2%)]"></div>
 
     <section id="palmares" class="py-16 bg-base-white">    
         <div class="w-full max-w-[1200px] mx-auto px-5 flex flex-col md:flex-row gap-10 md:gap-[5vw] items-center">
@@ -200,7 +201,7 @@
         </div>
     </section>
 
-    <section class="bg-base-white py-24 px-5 [clip-path:polygon(-0.2%_-0.2%,100%_100%,100%_-0.2%)]"></section>
+    <div class="bg-base-white py-24 px-5 [clip-path:polygon(-0.2%_-0.2%,100%_100%,100%_-0.2%)]"></div>
 
     <section id="galeria" class="py-20 bg-bg-black">
         <div class="w-full max-w-[1200px] mx-auto px-5">
@@ -209,28 +210,28 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
                 
                 <div class="relative h-[300px] overflow-hidden rounded-md border border-bg-dark-grey transition-all duration-300 hover:scale-[1.02] hover:shadow-glow-orange hover:z-10 group">
-                    <img src="../media/img/Highlights y Fotos/coche-blanco-y-negro.jpg" alt="Coche Diego" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <img src="../media/img/Highlights-y-Fotos/coche-blanco-y-negro.jpg" alt="Coche Diego" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute bottom-0 left-0 w-full h-[40%] bg-gradient-to-t from-primary-red/70 to-transparent flex items-end p-5 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                         <span class="text-white font-bold uppercase text-[1.1rem] translate-y-2 transition-transform duration-300 group-hover:translate-y-0">TN11</span>
                     </div>
                 </div>
 
                 <div class="relative h-[300px] overflow-hidden rounded-md border border-bg-dark-grey transition-all duration-300 hover:scale-[1.02] hover:shadow-glow-orange hover:z-10 group">
-                    <img src="../media/img/Highlights y Fotos/diego-boxes.jpg" alt="Diego en Boxes" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <img src="../media/img/Highlights-y-Fotos/diego-boxes.jpg" alt="Diego en Boxes" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute bottom-0 left-0 w-full h-[40%] bg-gradient-to-t from-primary-red/70 to-transparent flex items-end p-5 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                         <span class="text-white font-bold uppercase text-[1.1rem] translate-y-2 transition-transform duration-300 group-hover:translate-y-0">Diego García</span>
                     </div>
                 </div>
 
                 <div class="relative h-[300px] overflow-hidden rounded-md border border-bg-dark-grey transition-all duration-300 hover:scale-[1.02] hover:shadow-glow-orange hover:z-10 group">
-                    <img src="../media/img/Highlights y Fotos/diego-celebrando1.JPG" alt="Celebrando" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <img src="../media/img/Highlights-y-Fotos/diego-celebrando1.JPG" alt="Celebrando" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute bottom-0 left-0 w-full h-[40%] bg-gradient-to-t from-primary-red/70 to-transparent flex items-end p-5 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                         <span class="text-white font-bold uppercase text-[1.1rem] translate-y-2 transition-transform duration-300 group-hover:translate-y-0">Victorias</span>
                     </div>
                 </div>
 
                 <div class="relative h-[300px] overflow-hidden rounded-md border border-bg-dark-grey transition-all duration-300 hover:scale-[1.02] hover:shadow-glow-orange hover:z-10 group">
-                    <img src="../media/img/Highlights y Fotos/coche-tramo-barro.jpg" alt="Tramo Barro" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <img src="../media/img/Highlights-y-Fotos/coche-tramo-barro.jpg" alt="Tramo Barro" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute bottom-0 left-0 w-full h-[40%] bg-gradient-to-t from-primary-red/70 to-transparent flex items-end p-5 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                         <span class="text-white font-bold uppercase text-[1.1rem] translate-y-2 transition-transform duration-300 group-hover:translate-y-0">Competición</span>
                     </div>
@@ -248,7 +249,7 @@
                 
                 <article class="bg-bg-card border border-bg-dark-grey rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-glow-red hover:border-primary-red group">
                     <div class="relative h-[200px] overflow-hidden">
-                        <img src="../media/img/Highlights y Fotos/victoria-diego.jpg" alt="Victoria" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <img src="../media/img/Highlights-y-Fotos/victoria-diego.jpg" alt="Victoria" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         <span class="absolute top-4 right-4 bg-primary-red text-white py-1.5 px-3 text-xs font-bold uppercase [clip-path:polygon(10%_0,100%_0,90%_100%,0_100%)]">Competición</span>
                     </div>
                     <div class="p-6">
@@ -274,7 +275,7 @@
 
                 <article class="bg-bg-card border border-bg-dark-grey rounded-md overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-glow-red hover:border-primary-red group">
                     <div class="relative h-[200px] overflow-hidden">
-                        <img src="../media/img/Highlights y Fotos/coche-tramo-barro.jpg" alt="Entrenamientos" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <img src="../media/img/Highlights-y-Fotos/coche-tramo-barro.jpg" alt="Entrenamientos" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         <span class="absolute top-4 right-4 bg-primary-red text-white py-1.5 px-3 text-xs font-bold uppercase [clip-path:polygon(10%_0,100%_0,90%_100%,0_100%)]">Entrenamientos</span>
                     </div>
                     <div class="p-6">
@@ -297,13 +298,13 @@
                 
                 <div class="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-10 gap-8 items-center justify-items-center">
                     <img src="../media/sponsors/blancos/dimalnox.png" alt="Sponsor" class="col-span-2 h-[8vh] w-auto grayscale opacity-80 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
-                    <img src="../media/sponsors/blancos/maderas vazquez.png" alt="Sponsor" class="col-span-2 h-[8vh] w-auto grayscale opacity-80 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
-                    <img src="../media/sponsors/blancos/marmoles barbeito.png" alt="Sponsor" class="col-span-2 h-[8vh] w-auto grayscale opacity-80 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
+                    <img src="../media/sponsors/blancos/maderas-vazquez.png" alt="Sponsor" class="col-span-2 h-[8vh] w-auto grayscale opacity-80 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
+                    <img src="../media/sponsors/blancos/marmoles-barbeito.png" alt="Sponsor" class="col-span-2 h-[8vh] w-auto grayscale opacity-80 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
                     <img src="../media/sponsors/blancos/rallycar.png" alt="Sponsor" class="col-span-2 h-[8vh] w-auto grayscale opacity-80 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
-                    <img src="../media/sponsors/blancos/senra sport.png" alt="Sponsor" class="col-span-2 h-[8vh] w-auto grayscale opacity-80 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
+                    <img src="../media/sponsors/blancos/senra-sport.png" alt="Sponsor" class="col-span-2 h-[8vh] w-auto grayscale opacity-80 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
                     
-                    <img src="../media/sponsors/blancos/ramon garcia.png" alt="Sponsor" class="col-span-2 md:col-span-5 h-[12vh] md:h-[18vh] w-auto grayscale opacity-80 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
-                    <img src="../media/sponsors/blancos/rgs europe.png" alt="Sponsor" class="col-span-2 md:col-span-5 h-[12vh] md:h-[18vh] w-auto grayscale opacity-80 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
+                    <img src="../media/sponsors/blancos/ramongarcia.png" alt="Sponsor" class="col-span-2 md:col-span-5 h-[12vh] md:h-[18vh] w-auto grayscale opacity-80 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
+                    <img src="../media/sponsors/blancos/rgseurope.png" alt="Sponsor" class="col-span-2 md:col-span-5 h-[12vh] md:h-[18vh] w-auto grayscale opacity-80 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
                     
                     <img src="../media/sponsors/blancos/logoliñagar.png" alt="Sponsor" class="col-span-2 md:col-span-10 h-[8vh] w-auto grayscale opacity-80 transition-all duration-300 hover:grayscale-0 hover:opacity-100 hover:scale-110">
                 </div>
@@ -333,7 +334,7 @@
                     </div>
 
                     <div>
-                        <h4 class="text-primary-red text-[1.1rem] uppercase font-bold mb-5">Navegación</h4>
+                        <h3 class="text-primary-red text-[1.1rem] uppercase font-bold mb-5">Navegación</h3>
                         <ul class="list-none p-0">
                             <li class="mb-2.5"><a href="#" class="text-base-white no-underline text-[0.95rem] transition-colors duration-300 hover:text-primary-orange hover:pl-1">Inicio</a></li>
                             <li class="mb-2.5"><a href="#" class="text-base-white no-underline text-[0.95rem] transition-colors duration-300 hover:text-primary-orange hover:pl-1">Palmarés</a></li>
@@ -344,7 +345,7 @@
                     </div>
 
                     <div>
-                        <h4 class="text-primary-red text-[1.1rem] uppercase font-bold mb-5">Contacto</h4>
+                        <h3 class="text-primary-red text-[1.1rem] uppercase font-bold mb-5">Contacto</h3>
                         <p class="text-text-muted text-[0.95rem] mb-2.5">diegogarciamesia@gmail.com</p>
                         <p class="text-text-muted text-[0.95rem] mb-2.5">+34 626 15 61 46</p>
                         <p class="text-text-muted text-[0.95rem] mb-2.5">A Coruña, Galicia, España</p>
@@ -354,7 +355,7 @@
             </div>
         </div>
 
-        <div class="border-t border-bg-card py-5 text-[0.8rem] text-[#666666]">
+        <div class="border-t border-bg-card py-5 text-[0.8rem] text-[#a3a3a3]">
             <div class="w-full max-w-[1200px] mx-auto px-5 flex flex-col md:flex-row justify-between items-center gap-2">
                 <p>&copy; 2026 Diego García. Todos los derechos reservados.</p>
                 <p>Diseñado por <a href="#" class="text-primary-red no-underline">Diego García Candal y Daniel Gómez Aradas</a></p>
