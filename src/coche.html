@@ -64,27 +64,47 @@
 
     <header id="main-header" class="fixed top-0 left-0 w-full z-50 py-8 transition-all duration-300 ease-in-out bg-gradient-to-b from-black/90 to-transparent">
         <div class="w-full max-w-[1200px] mx-auto px-5 flex justify-between items-center">
+            
             <div class="text-center group">
                 <a href="index.html" class="no-underline text-base-white block">
                     <h1 class="text-[1.8rem] font-extrabold uppercase tracking-wide mb-[-5px] leading-tight">Diego</h1>
                     <h2 class="text-[1.8rem] font-normal text-primary-red mt-[-5px] leading-tight group-hover:text-primary-orange transition-colors duration-300">García</h2>
                 </a>
             </div>
+
             <nav class="hidden md:block">
                 <ul class="flex items-center gap-6 list-none m-0 p-0">
                     <li><a href="index.html" class="text-sm font-medium uppercase hover:text-primary-red transition-colors duration-300">Inicio</a></li>
                     <li><a href="index.html#palmares" class="text-sm font-medium uppercase hover:text-primary-red transition-colors duration-300">Palmarés</a></li>
                     <li><a href="index.html#galeria" class="text-sm font-medium uppercase hover:text-primary-red transition-colors duration-300">Galería</a></li>
                     <li><a href="index.html#noticias" class="text-sm font-medium uppercase hover:text-primary-red transition-colors duration-300">Noticias</a></li>
-                    <li><span class="text-sm font-medium uppercase text-primary-red">Vehículo</span></li>
+                    <li><a href="coche.html" class="text-sm font-medium uppercase text-primary-red transition-colors duration-300">Coche</a></li>
                     <li><a href="contacto.html" class="text-sm font-medium uppercase hover:text-primary-red transition-colors duration-300">Contacto</a></li>
+                    
                     <li class="relative w-[10vh] h-[10vh] ml-4 cursor-pointer group">
                         <img src="../media/logos/Logo-Diego-Blanco.png" alt="Logo" class="absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-500 ease-in-out group-hover:opacity-0">
                         <img src="../media/logos/Logo-Diego-Rojo.png" alt="Logo Hover" class="absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100">
                     </li>
                 </ul>   
             </nav>
+
+            <button id="mobile-menu-btn" class="md:hidden text-white text-2xl cursor-pointer bg-transparent border-none" aria-label="Abrir menú de navegación" aria-controls="mobile-menu" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
         </div>
+
+        <nav id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-black/95 border-t border-white/10 backdrop-blur-md pb-6 md:hidden">
+            <ul class="flex flex-col items-center gap-6 list-none m-0 pt-6 p-0">
+                <li><a href="index.html" class="text-base font-medium uppercase text-base-white hover:text-primary-red transition-colors duration-300">Inicio</a></li>
+                <li><a href="index.html#palmares" class="text-base font-medium uppercase text-base-white hover:text-primary-red transition-colors duration-300">Palmarés</a></li>
+                <li><a href="index.html#galeria" class="text-base font-medium uppercase text-base-white hover:text-primary-red transition-colors duration-300">Galería</a></li>
+                <li><a href="index.html#noticias" class="text-base font-medium uppercase text-base-white hover:text-primary-red transition-colors duration-300">Noticias</a></li>
+                <li><a href="coche.html" class="text-sm font-medium uppercase text-primary-red transition-colors duration-300">Coche</a></li>
+                <li><a href="contacto.html" class="text-base font-medium uppercase text-base-white hover:text-primary-red transition-colors duration-300">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main class="pt-[160px] pb-20">
@@ -102,9 +122,9 @@
                 <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 select-none">
 
                     <button id="btn-prev" class="flex flex-col items-center gap-3 cursor-pointer group bg-transparent border-none" aria-label="Imagen anterior">
-                        <div class="border-2 border-primary-orange text-primary-orange w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 text-2xl group-hover:bg-primary-orange group-hover:text-white group-hover:shadow-glow-orange group-hover:scale-110">
+                        <span class="border-2 border-primary-orange text-primary-orange w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 text-2xl group-hover:bg-primary-orange group-hover:text-white group-hover:shadow-glow-orange group-hover:scale-110">
                             &#8592;
-                        </div>
+                        </span>
                         <span class="text-xs font-bold text-text-muted uppercase tracking-widest transition-colors duration-300 group-hover:text-white">Anterior</span>
                     </button>
 
@@ -117,9 +137,9 @@
                     </div>
 
                     <button id="btn-next" class="flex flex-col items-center gap-3 cursor-pointer group bg-transparent border-none" aria-label="Siguiente imagen">
-                        <div class="border-2 border-primary-orange text-primary-orange w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 text-2xl group-hover:bg-primary-orange group-hover:text-white group-hover:shadow-glow-orange group-hover:scale-110">
+                        <span class="border-2 border-primary-orange text-primary-orange w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 text-2xl group-hover:bg-primary-orange group-hover:text-white group-hover:shadow-glow-orange group-hover:scale-110">
                             &#8594;
-                        </div>
+                        </span>
                         <span class="text-xs font-bold text-text-muted uppercase tracking-widest transition-colors duration-300 group-hover:text-white">Siguiente</span>
                     </button>
                 </div>
@@ -204,10 +224,10 @@
                             Pasión, competitividad y técnica en cada carrera.
                         </p>
                         <div class="flex gap-4">
-                            <a href="#" aria-label="Perfil de Instagram" class="w-[35px] h-[35px] bg-bg-card flex items-center justify-center rounded-full text-base-white font-bold text-xs border border-bg-dark-grey transition-all duration-300 hover:bg-primary-red hover:border-primary-red hover:-translate-y-1 no-underline">IG</a>
-                            <a href="#" aria-label="Página de Facebook" class="w-[35px] h-[35px] bg-bg-card flex items-center justify-center rounded-full text-base-white font-bold text-xs border border-bg-dark-grey transition-all duration-300 hover:bg-primary-red hover:border-primary-red hover:-translate-y-1 no-underline">FB</a>
-                            <a href="#" aria-label="Canal de YouTube" class="w-[35px] h-[35px] bg-bg-card flex items-center justify-center rounded-full text-base-white font-bold text-xs border border-bg-dark-grey transition-all duration-300 hover:bg-primary-red hover:border-primary-red hover:-translate-y-1 no-underline">YT</a>
-                            <a href="#" aria-label="Perfil de X" class="w-[35px] h-[35px] bg-bg-card flex items-center justify-center rounded-full text-base-white font-bold text-xs border border-bg-dark-grey transition-all duration-300 hover:bg-primary-red hover:border-primary-red hover:-translate-y-1 no-underline">X</a>
+                            <a href="#" aria-label="Perfil de Instagram" class="w-[44px] h-[44px] bg-bg-card flex items-center justify-center rounded-full text-base-white font-bold text-xs border border-bg-dark-grey transition-all duration-300 hover:bg-primary-red hover:border-primary-red hover:-translate-y-1 no-underline">IG</a>
+                            <a href="#" aria-label="Página de Facebook" class="w-[44px] h-[44px] bg-bg-card flex items-center justify-center rounded-full text-base-white font-bold text-xs border border-bg-dark-grey transition-all duration-300 hover:bg-primary-red hover:border-primary-red hover:-translate-y-1 no-underline">FB</a>
+                            <a href="#" aria-label="Canal de YouTube" class="w-[44px] h-[44px] bg-bg-card flex items-center justify-center rounded-full text-base-white font-bold text-xs border border-bg-dark-grey transition-all duration-300 hover:bg-primary-red hover:border-primary-red hover:-translate-y-1 no-underline">YT</a>
+                            <a href="#" aria-label="Perfil de X" class="w-[44px] h-[44px] bg-bg-card flex items-center justify-center rounded-full text-base-white font-bold text-xs border border-bg-dark-grey transition-all duration-300 hover:bg-primary-red hover:border-primary-red hover:-translate-y-1 no-underline">X</a>
                         </div>
                     </div>
 
@@ -303,6 +323,14 @@
                 header.classList.remove('py-4', 'bg-black/95', 'backdrop-blur-md', 'shadow-lg');
             }
         });
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+    const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+    mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+    mobileMenu.classList.toggle('hidden');
+    });
     </script>
 </body>
 </html>
