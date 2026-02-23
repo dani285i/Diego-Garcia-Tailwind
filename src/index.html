@@ -58,13 +58,19 @@
 
 <body class="bg-bg-black text-text-light font-montserrat leading-relaxed selection:bg-primary-red selection:text-white antialiased">
 
+    <a href="#main-header" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary-red text-white p-2 z-[100] rounded">
+        Saltar al contenido principal
+    </a>
+
     <header id="main-header" class="fixed top-0 left-0 w-full z-50 py-8 transition-all duration-300 ease-in-out bg-gradient-to-b from-black/90 to-transparent">
         <div class="w-full max-w-[1200px] mx-auto px-5 flex justify-between items-center">
             
             <div class="text-center group">
                 <a href="index.html" class="no-underline text-base-white block">
-                    <span class="block text-[1.8rem] font-extrabold uppercase tracking-wide mb-[-5px] leading-tight">Diego</span>
-                    <span class="block text-[1.8rem] font-normal text-primary-red mt-[-5px] leading-tight group-hover:text-primary-orange transition-colors duration-300">García</span>
+                    <h1 class="text-[1.8rem] leading-tight flex flex-col">
+                        <span class="font-extrabold uppercase tracking-wide mb-[-5px]">Diego</span>
+                        <span class="font-normal text-primary-red mt-[-5px] group-hover:text-primary-orange transition-colors duration-300">García</span>
+                    </h1>
                 </a>
             </div>
 
@@ -84,12 +90,23 @@
                 </ul>   
             </nav>
             
-            <div class="md:hidden text-white text-2xl cursor-pointer">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
+           <button id="mobile-menu-btn" class="md:hidden text-white text-2xl cursor-pointer bg-transparent border-none" aria-label="Abrir menú de navegación" aria-controls="mobile-menu" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                 </svg>
-            </div>
+            </button>
         </div>
+
+        <nav id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-black/95 border-t border-white/10 backdrop-blur-md pb-6 md:hidden">
+            <ul class="flex flex-col items-center gap-6 list-none m-0 pt-6 p-0">
+                <li><a href="index.html" class="text-base font-medium uppercase text-base-white hover:text-primary-red transition-colors duration-300">Inicio</a></li>
+                <li><a href="index.html#palmares" class="text-base font-medium uppercase text-base-white hover:text-primary-red transition-colors duration-300">Palmarés</a></li>
+                <li><a href="index.html#galeria" class="text-base font-medium uppercase text-base-white hover:text-primary-red transition-colors duration-300">Galería</a></li>
+                <li><a href="index.html#noticias" class="text-base font-medium uppercase text-base-white hover:text-primary-red transition-colors duration-300">Noticias</a></li>
+                <li><a href="coche.html" class="text-base font-medium uppercase text-base-white hover:text-primary-red transition-colors duration-300">Vehículo</a></li>
+                <li><a href="contacto.html" class="text-base font-medium uppercase text-base-white hover:text-primary-red transition-colors duration-300">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
 
     <section id="inicio" class="relative h-screen w-full flex items-center justify-center overflow-hidden group cursor-default">
@@ -376,6 +393,15 @@
                 header.classList.remove('py-4', 'bg-black/90', 'backdrop-blur-md', 'shadow-lg', 'border-b', 'border-white/5');
             }
         });
+
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+    const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+    mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+    mobileMenu.classList.toggle('hidden');
+    });
     </script>
 
 </body>
