@@ -49,7 +49,8 @@ git clone [https://github.com/dani285i/Diego-Garcia-Tailwind.git](https://github
 cd Diego-Garcia-Tailwind/src
 A continuación, abra el archivo index.html resultante en cualquier navegador web moderno. No se requiere la instalación de dependencias en el servidor al utilizar Tailwind mediante CDN.
 
-Autores
+## Autores
+
 Daniel Gómez Aradas
 
 Diego García Candal
